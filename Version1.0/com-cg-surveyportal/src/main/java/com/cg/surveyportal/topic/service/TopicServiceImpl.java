@@ -6,6 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cg.surveyportal.survey.entities.Survey;
+import com.cg.surveyportal.survey.service.ISurveyService;
 import com.cg.surveyportal.topic.entities.Topic;
 import com.cg.surveyportal.topic.repository.ITopicRepository;
 
@@ -14,6 +16,7 @@ public class TopicServiceImpl implements ITopicService {
 
 	@Autowired
 	private ITopicRepository topicRepository;
+	
 	@Override
 	public Topic getTopicById(long id) {
 		Topic topicById = topicRepository.findById(id).get();
@@ -82,6 +85,13 @@ public class TopicServiceImpl implements ITopicService {
 	@Override
 	public long getTopicCount() {
 		return topicRepository.count();
+	}
+
+	
+	@Override
+	public void addSurveysToTopic(Survey survey, String name) {
+		Topic addSurveyTo = topicRepository.findByName(name).get(0);
+		addSurveyTo.getSurveys().add(survey);
 	}
 
 }

@@ -2,6 +2,7 @@ package com.cg.surveyportal.topic.service;
 
 import java.util.List;
 
+import com.cg.surveyportal.survey.entities.Survey;
 import com.cg.surveyportal.topic.entities.Topic;
 
 public interface ITopicService {
@@ -16,4 +17,5 @@ public interface ITopicService {
     public List<Topic> getAllTopic();
     public void populateTopic();
     public long getTopicCount();
+	public void addSurveysToTopic(Survey survey, String name);
 }

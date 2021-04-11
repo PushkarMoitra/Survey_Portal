@@ -8,9 +8,11 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.cg.surveyportal.survey.entities.Survey;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table
@@ -18,23 +20,26 @@ public class Topic {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
-	@Column(nullable = false, length = 50)
+	@Column(length = 50)
     private String name;
-	@Column(nullable = false, length = 100)
+	@Column(length = 100)
     private String description;
-//    @OneToMany(mappedBy="topic", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-//    private List<Survey> surveys;
+	@JsonManagedReference
+    @OneToMany(mappedBy="topic", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private List<Survey> surveys;
 //    @ManyToOne(fetch = FetchType.LAZY, optional = false)
 //    private Surveyor surveyors;
+	
 	
 	//Constructors
 	public Topic() {
 	}
-	public Topic(long id, String name, String description) {
+	public Topic(long id, String name, String description, List<Survey> surveys) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;
+		this.surveys = surveys;
 	}
 	//getters and setters
 	public long getId() {
@@ -55,9 +60,14 @@ public class Topic {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	//toString 
+	public List<Survey> getSurveys() {
+		return surveys;
+	}
+	public void setSurveys(List<Survey> surveys) {
+		this.surveys = surveys;
+	}
 	@Override
 	public String toString() {
-		return "Topic [id=" + id + ", name=" + name + ", description=" + description + "]";
+		return "Topic [id=" + id + ", name=" + name + ", description=" + description + ", surveys=" + surveys + "]";
 	}
 }
