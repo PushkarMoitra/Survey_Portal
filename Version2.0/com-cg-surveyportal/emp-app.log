@@ -1814,3 +1814,38 @@ java.lang.IllegalArgumentException: Cannot create binding for parameter referenc
 2021-04-12 14:19:46.700  INFO 23964 --- [http-nio-8070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2021-04-12 14:19:46.701  INFO 23964 --- [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2021-04-12 14:19:46.702  INFO 23964 --- [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-12 14:56:49.273  INFO 17424 --- [restartedMain] c.c.s.SurveyportalApplication            : Starting SurveyportalApplication using Java 13.0.2 on Predator with PID 17424 (D:\Programming\JAVA\Project\com-cg-surveyportal\bin\main started by P_Moitra in D:\Programming\JAVA\Project\com-cg-surveyportal)
+2021-04-12 14:56:49.283  INFO 17424 --- [restartedMain] c.c.s.SurveyportalApplication            : No active profile set, falling back to default profiles: default
+2021-04-12 14:56:49.361  INFO 17424 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\P_Moitra\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc8\19.8.0.0\df9cff9b91c47d06b9a0482d566ee2d83a03e586\ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/C:/Users/P_Moitra/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/19.8.0.0/df9cff9b91c47d06b9a0482d566ee2d83a03e586/oraclepki.jar
+2021-04-12 14:56:49.362  INFO 17424 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-12 14:56:49.362  INFO 17424 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-12 14:56:50.637  INFO 17424 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-12 14:56:50.737  INFO 17424 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 3 JPA repository interfaces.
+2021-04-12 14:56:51.623  INFO 17424 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8070 (http)
+2021-04-12 14:56:51.635  INFO 17424 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-12 14:56:51.635  INFO 17424 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-04-12 14:56:51.802  INFO 17424 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-12 14:56:51.802  INFO 17424 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2439 ms
+2021-04-12 14:56:52.098  INFO 17424 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-12 14:56:52.147  INFO 17424 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.0.0.Alpha6
+2021-04-12 14:56:52.256  INFO 17424 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-12 14:56:52.394  INFO 17424 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-12 14:56:52.657  INFO 17424 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-12 14:56:52.672  INFO 17424 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-12 14:56:52.674  WARN 17424 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: Oracle10gDialect has been deprecated; use org.hibernate.dialect.OracleDialect instead
+2021-04-12 14:56:53.549  INFO 17424 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-12 14:56:53.557  INFO 17424 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-12 14:56:53.578  INFO 17424 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-12 14:56:54.187  WARN 17424 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-12 14:56:54.343  INFO 17424 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-12 14:56:54.429  INFO 17424 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-12 14:56:54.849  INFO 17424 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8070 (http) with context path ''
+2021-04-12 14:56:54.850  INFO 17424 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-12 14:56:54.867  INFO 17424 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-12 14:56:54.890  INFO 17424 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-12 14:56:55.063  INFO 17424 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getTopicByIdUsingGET_1
+2021-04-12 14:56:55.068  INFO 17424 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: populateUsingGET_1
+2021-04-12 14:56:55.088  INFO 17424 --- [restartedMain] c.c.s.SurveyportalApplication            : Started SurveyportalApplication in 6.457 seconds (JVM running for 7.842)
+2021-04-12 14:57:07.100  INFO 17424 --- [http-nio-8070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-12 14:57:07.103  INFO 17424 --- [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-12 14:57:07.108  INFO 17424 --- [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
