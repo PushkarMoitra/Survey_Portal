@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.cg.surveyportal.entities.Survey;
 import com.cg.surveyportal.entities.Topic;
 import com.cg.surveyportal.repositories.ITopicRepository;
+import com.cg.surveyportal.services.ISurveyService;
 import com.cg.surveyportal.services.ISurveyorService;
 import com.cg.surveyportal.services.ITopicService;
 
@@ -28,40 +29,42 @@ public class TopicServiceImpl implements ITopicService {
 
 	@Override
 	public List<Topic> getTopicsDetails(String name) {
-		List<Topic> TopicsByName = topicRepository.findByName(name);
-		return TopicsByName;
+		return topicRepository.findByName(name);
 	}
 
-	@Override
-	public void populateTopic() {
-		List<Topic> topicList = new ArrayList<>();
-		
-		Topic topic = new Topic();
-		topic.setName("Movies");
-		topic.setDescription("All surveys related to movies and flims will be found here.");
-		topic.setSurveyor(surveyorService.getSurveyorDetails("hayChristo"));
-		topicList.add(topic);
-		//*************************************//
-		topic = new Topic();
-		topic.setName("TV Shows");
-		topic.setDescription("All surveys related to TV Shows and Web Series will be found here.");
-		topic.setSurveyor(surveyorService.getSurveyorDetails("berk_aleX"));
-		topicList.add(topic);
-		//*************************************//
-		topic = new Topic();
-		topic.setName("Gaming");
-		topic.setDescription("All surveys related to video games and e-sports  will be found here.");
-		topic.setSurveyor(surveyorService.getSurveyorDetails("jason_browdy"));
-		topicList.add(topic);
-		//*************************************//
-		topic = new Topic();
-		topic.setName("Litrature");
-		topic.setDescription("All surveys related to Litrature and poetry will be found here.");
-		topic.setSurveyor(surveyorService.getSurveyorDetails("MonsWill"));
-		topicList.add(topic);
-		//*************************************//
-		topicRepository.saveAll(topicList);
-	}
+//	@Override
+//	public void populateTopic() {
+//	@Autowired
+//	private ISurveyorService surveyorService;
+	
+//		List<Topic> topicList = new ArrayList<>();
+//		
+//		Topic topic = new Topic();
+//		topic.setName("Movies");
+//		topic.setDescription("All surveys related to movies and flims will be found here.");
+//		topic.setSurveyor(surveyorService.getSurveyorDetails("hayChristo"));
+//		topicList.add(topic);
+//		//*************************************//
+//		topic = new Topic();
+//		topic.setName("TV Shows");
+//		topic.setDescription("All surveys related to TV Shows and Web Series will be found here.");
+//		topic.setSurveyor(surveyorService.getSurveyorDetails("berk_aleX"));
+//		topicList.add(topic);
+//		//*************************************//
+//		topic = new Topic();
+//		topic.setName("Gaming");
+//		topic.setDescription("All surveys related to video games and e-sports  will be found here.");
+//		topic.setSurveyor(surveyorService.getSurveyorDetails("jason_browdy"));
+//		topicList.add(topic);
+//		//*************************************//
+//		topic = new Topic();
+//		topic.setName("Litrature");
+//		topic.setDescription("All surveys related to Litrature and poetry will be found here.");
+//		topic.setSurveyor(surveyorService.getSurveyorDetails("MonsWill"));
+//		topicList.add(topic);
+//		//*************************************//
+//		topicRepository.saveAll(topicList);
+//	}
 
 	@Override
 	public List<Topic> getAllTopic() {
@@ -69,22 +72,9 @@ public class TopicServiceImpl implements ITopicService {
 	}
 
 	@Override
-	public Topic addTopic(Topic newTopic) {
-		topicRepository.save(newTopic);
-		return newTopic;
-	}
-
-	@Override
-	public Topic updateTopic(Topic topic) {
-		Topic updatedTopic = this.getTopicDetails(topic.getId());
-		updatedTopic.setName(topic.getName());
-		updatedTopic.setDescription(topic.getDescription());
-		return topicRepository.save(updatedTopic);
-	}
-
-	@Override
-	public Topic removeTopicById(long id) {
+	public Topic removeTopic(long id) {
 		Topic deletedTopic = this.getTopicDetails(id);
+		deletedTopic.setSurveyor(null);
 		topicRepository.deleteById(id);
 		return deletedTopic;
 	}
@@ -94,11 +84,37 @@ public class TopicServiceImpl implements ITopicService {
 		return topicRepository.count();
 	}
 
-	
 	@Override
 	public void addSurveysToTopic(Survey survey, String name) {
 		Topic addSurveyTo = topicRepository.findByName(name).get(0);
 		addSurveyTo.getSurveys().add(survey);
 	}
 
+	@Override
+	public Topic addTopic(String name, String description, String surveyorUsername) {
+		Topic newTopic = new Topic();
+		newTopic.setName(name);
+		newTopic.setDescription(description);
+		newTopic.setSurveyor(surveyorService.getSurveyorDetails(surveyorUsername));
+		topicRepository.save(newTopic);
+		return newTopic;
+	}
+
+	@Override
+	public Topic updateTopicName(long id, String name) {
+		Topic updateTopic = this.getTopicDetails(id);
+		updateTopic.setName(name);
+		topicRepository.save(updateTopic);
+		return updateTopic;
+	}
+
+	@Override
+	public Topic updateTopicDescription(long id, String description) {
+		Topic updateTopic = this.getTopicDetails(id);
+		updateTopic.setDescription(description);
+		topicRepository.save(updateTopic);
+		return updateTopic;
+	}
+
+	
 }

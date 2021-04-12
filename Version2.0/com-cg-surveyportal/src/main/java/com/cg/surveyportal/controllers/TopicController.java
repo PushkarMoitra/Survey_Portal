@@ -22,11 +22,11 @@ public class TopicController {
 	@Autowired
 	private ITopicService topicService;
 	
-	@GetMapping("/populate")
-	private void populate()
-	{
-		topicService.populateTopic();
-	}
+//	@GetMapping("/populate")
+//	private void populate()
+//	{
+//		topicService.populateTopic();
+//	}
 	
 	@GetMapping("/alltopics")
 	private List<Topic> getAllTopics()
@@ -46,27 +46,33 @@ public class TopicController {
 		return topicService.getTopicsDetails(name);
 	}
 	
-	@PostMapping("/addtopic")
-	private Topic addNewTopic(@RequestBody Topic topic)
+	@GetMapping("/topiccount")
+	private long getTopicCount()
 	{
-		return topicService.addTopic(topic);
+		return topicService.getTopicCount();
+	}
+
+	@PostMapping("/addtopic/{name}/{description}/{surveyorUsername}")
+	private Topic addNewTopic(@PathVariable("name") String name, @PathVariable("description") String description, @PathVariable("surveyorUsername") String surveyorUsername )
+	{
+		return topicService.addTopic(name, description, surveyorUsername);
 	}
 	
-	@PutMapping("/modifytopic")
-	private Topic modifyTopic(@RequestBody Topic topic)
+	@PutMapping("/modify/name/{id}/{name}")
+	private Topic modifyTopicName(@PathVariable("id") long id, @PathVariable("name") String name)
 	{
-		return topicService.updateTopic(topic);
+		return topicService.updateTopicName(id, name);
+	}
+	
+	@PutMapping("/modify/description/{id}/{description}")
+	private Topic modifyTopicDescription(@PathVariable("id") long id, @PathVariable("description") String description)
+	{
+		return topicService.updateTopicDescription(id, description);
 	}
 	
 	@DeleteMapping("/removetopicbyid/{id}")
 	private Topic removeTopicById(@PathVariable("id") long id)
 	{
-		return topicService.removeTopicById(id);
-	}
-	
-	@GetMapping("/topiccount")
-	private long getTopicCount()
-	{
-		return topicService.getTopicCount();
+		return topicService.removeTopic(id);
 	}
 }
