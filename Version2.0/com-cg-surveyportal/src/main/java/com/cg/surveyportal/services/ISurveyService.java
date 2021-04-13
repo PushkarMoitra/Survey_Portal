@@ -6,7 +6,7 @@ import com.cg.surveyportal.entities.Survey;
 
 public interface ISurveyService {
 
-	public void populateSurvey();
+	//public void populateSurvey();
 	public List<Survey> getAllSurveys();
 	public Survey getSurveyById(long id);
 	
