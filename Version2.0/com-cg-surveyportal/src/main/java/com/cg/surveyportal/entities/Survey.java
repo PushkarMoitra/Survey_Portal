@@ -34,12 +34,12 @@ public class Survey {
 	@Column
     private Boolean isActive;
 	@JsonBackReference
-	@ManyToOne(fetch = FetchType.EAGER, optional = true, cascade = CascadeType.ALL)
+	@ManyToOne(fetch = FetchType.LAZY, optional = true, cascade = CascadeType.ALL)
 	@JoinColumn(name = "topic")
     private Topic topic;
 	@JsonBackReference
-	@ManyToOne(fetch = FetchType.EAGER, optional = true, cascade = CascadeType.ALL)
-	@JoinColumn(name = "id", insertable = false, updatable = false)
+	@ManyToOne//(fetch = FetchType.EAGER, optional = true, cascade = CascadeType.ALL)
+	@JoinColumn(name = "id", insertable = false, updatable = false, nullable = true)
     private Surveyor surveyor;
 	@JsonManagedReference
     @OneToMany(mappedBy="survey", fetch = FetchType.EAGER, cascade = CascadeType.ALL)

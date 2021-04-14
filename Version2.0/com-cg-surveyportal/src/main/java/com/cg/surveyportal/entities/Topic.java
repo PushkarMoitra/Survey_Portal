@@ -26,7 +26,7 @@ public class Topic {
 	@Column(length = 100)
     private String description;
 	@JsonManagedReference
-    @OneToMany(mappedBy="topic", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy="topic", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Survey> surveys;
 	@OneToOne(cascade = CascadeType.ALL)
     @JoinColumn( referencedColumnName = "id")

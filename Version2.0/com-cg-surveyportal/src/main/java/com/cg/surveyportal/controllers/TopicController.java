@@ -80,6 +80,11 @@ public class TopicController {
 	{
 		return new ResponseEntity<Topic>(topicService.updateTopicDescription(id, description), HttpStatus.OK);
 	}
+	@PutMapping("/modify/surveyor/{id}/{surveyorid}")
+	private ResponseEntity<Topic> modifyTopicSurveyor(@PathVariable("id") long id, @PathVariable("surveyorid") long surveyorid)
+	{
+		return new ResponseEntity<Topic>(topicService.changeSurveyor(id, surveyorid), HttpStatus.OK);
+	}
 	
 	@DeleteMapping("/removetopic/{id}")
 	private ResponseEntity<Topic> removeTopic(@PathVariable("id") long id) throws TopicNotFoundException

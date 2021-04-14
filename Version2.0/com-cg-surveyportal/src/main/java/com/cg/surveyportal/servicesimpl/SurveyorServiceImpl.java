@@ -20,56 +20,57 @@ public class SurveyorServiceImpl implements ISurveyorService {
 		serveyor.setFirstName("David");
 		serveyor.setLastName("Austin");
 		serveyor.setUsername("dav_aus");
-		serveyor.setSurveys(null);
+		//serveyor.setSurveys(null);
 		surveyorRepository.save(serveyor);
 		/*----------------------------------------------*/
+		
 		serveyor = new Surveyor();
 		serveyor.setFirstName("Alex");
 		serveyor.setLastName("Berk");
 		serveyor.setUsername("berk_aleX");
-		serveyor.setSurveys(null);
+		//serveyor.setSurveys(null);
 		surveyorRepository.save(serveyor);
 		/*----------------------------------------------*/
 		serveyor = new Surveyor();
 		serveyor.setFirstName("Christopher");
 		serveyor.setLastName("Haywire");
 		serveyor.setUsername("hayChristo");
-		serveyor.setSurveys(null);
+		//serveyor.setSurveys(null);
 		surveyorRepository.save(serveyor);
 		/*----------------------------------------------*/
 		serveyor = new Surveyor();
 		serveyor.setFirstName("Monica");
 		serveyor.setLastName("Williams");
 		serveyor.setUsername("MonsWill");
-		serveyor.setSurveys(null);
+		//serveyor.setSurveys(null);
 		surveyorRepository.save(serveyor);
 		/*----------------------------------------------*/
 		serveyor = new Surveyor();
 		serveyor.setFirstName("Irene");
 		serveyor.setLastName("Nayer");
 		serveyor.setUsername("IMnayer");
-		serveyor.setSurveys(null);
+		//serveyor.setSurveys(null);
 		surveyorRepository.save(serveyor);
 		/*----------------------------------------------*/
 		serveyor = new Surveyor();
 		serveyor.setFirstName("David");
 		serveyor.setLastName("Lee");
 		serveyor.setUsername("Dlee");
-		serveyor.setSurveys(null);
+		//serveyor.setSurveys(null);
 		surveyorRepository.save(serveyor);
 		/*----------------------------------------------*/
 		serveyor = new Surveyor();
 		serveyor.setFirstName("Oliver");
 		serveyor.setLastName("Bell");
 		serveyor.setUsername("BellO");
-		serveyor.setSurveys(null);
+		//serveyor.setSurveys(null);
 		surveyorRepository.save(serveyor);
 		/*----------------------------------------------*/
 		serveyor = new Surveyor();
 		serveyor.setFirstName("Kelly");
 		serveyor.setLastName("Jones");
 		serveyor.setUsername("JonesK");
-		serveyor.setSurveys(null);
+		//serveyor.setSurveys(null);
 		surveyorRepository.save(serveyor);
 		/*----------------------------------------------*/
 	}
@@ -86,6 +87,23 @@ public class SurveyorServiceImpl implements ISurveyorService {
 	
 	public Surveyor getSurveyorDetails(long id) {
 		return surveyorRepository.findById(id).get();
+	}
+
+	@Override
+	public void removeById(long id) {
+		Surveyor surveyor = surveyorRepository.findById(id).get();
+		surveyor.setSurveys(null);
+		surveyorRepository.deleteById(id);
+	}
+
+	@Override
+	public void addSurveyor(String firstName, String lastName, String username) {
+			Surveyor serveyor = new Surveyor();
+			serveyor.setFirstName(firstName);
+			serveyor.setLastName(lastName);
+			serveyor.setUsername(username);
+			serveyor.setSurveys(null);
+			surveyorRepository.save(serveyor);
 	}
 
 

@@ -21,14 +21,14 @@ public class Surveyor {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
-	@Column(nullable = false, length = 20)	
+	@Column(nullable = false,unique = true, length = 20)	
     private String username;
 	@Column(nullable = false, length = 20)
     private String firstName;
 	@Column(nullable = false, length = 20)
     private String lastName;
 	@JsonManagedReference
-    @OneToMany(mappedBy="surveyor", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy="surveyor", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Survey> surveys;
 	
 	public Surveyor() {

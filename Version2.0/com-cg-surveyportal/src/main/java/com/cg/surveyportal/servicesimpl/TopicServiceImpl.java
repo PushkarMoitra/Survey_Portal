@@ -1,5 +1,6 @@
 package com.cg.surveyportal.servicesimpl;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -89,39 +90,64 @@ public class TopicServiceImpl implements ITopicService {
 		return this.getTopicsDetails(name).get(0).getSurveys().size();
 	}
 	
-//	@Override
-//	public void populateTopic() {
-//	@Autowired
-//	private ISurveyorService surveyorService;
 	
-//		List<Topic> topicList = new ArrayList<>();
-//		
-//		Topic topic = new Topic();
-//		topic.setName("Movies");
-//		topic.setDescription("All surveys related to movies and flims will be found here.");
-//		topic.setSurveyor(surveyorService.getSurveyorDetails("hayChristo"));
-//		topicList.add(topic);
-//		//*************************************//
-//		topic = new Topic();
-//		topic.setName("TV Shows");
-//		topic.setDescription("All surveys related to TV Shows and Web Series will be found here.");
-//		topic.setSurveyor(surveyorService.getSurveyorDetails("berk_aleX"));
-//		topicList.add(topic);
-//		//*************************************//
-//		topic = new Topic();
-//		topic.setName("Gaming");
-//		topic.setDescription("All surveys related to video games and e-sports  will be found here.");
-//		topic.setSurveyor(surveyorService.getSurveyorDetails("jason_browdy"));
-//		topicList.add(topic);
-//		//*************************************//
-//		topic = new Topic();
-//		topic.setName("Litrature");
-//		topic.setDescription("All surveys related to Litrature and poetry will be found here.");
-//		topic.setSurveyor(surveyorService.getSurveyorDetails("MonsWill"));
-//		topicList.add(topic);
-//		//*************************************//
-//		topicRepository.saveAll(topicList);
-//	}
+	@Override
+	public void populateTopic() {
+	
+		List<Topic> topicList = new ArrayList<>();
+		
+		Topic topic = new Topic();
+		topic.setName("Product Feedback");
+		topic.setDescription("How the users are feeling about a particular product they brought?");
+		topic.setSurveyor(surveyorService.getSurveyorDetails("Dlee"));
+		topic.setSurveys(null);
+		topicList.add(topic);
+		//*************************************//
+		topic = new Topic();
+		topic.setName("Employee Satisfaction");
+		topic.setDescription("How much satisfied the employees are with their organizational performance?");
+		topic.setSurveyor(surveyorService.getSurveyorDetails("MonsWill"));
+		topic.setSurveys(null);
+		topicList.add(topic);
+		//*************************************//
+		topic = new Topic();
+    	topic.setName("Brand Awareness");
+		topic.setDescription("Checking the awareness of particular brand among the general public.");
+		topic.setSurveyor(surveyorService.getSurveyorDetails("JonesK"));
+		topic.setSurveys(null);
+		topicList.add(topic);
+		//*************************************//
+		topic = new Topic();
+		topic.setName("Customer Satisfaction");
+		topic.setDescription("How much satisfied the customers are with the services they were provided?");
+		topic.setSurveyor(surveyorService.getSurveyorDetails("IMnayer"));
+		topic.setSurveys(null);
+		topicList.add(topic);
+		//*************************************//
+		topic = new Topic();
+		topic.setName("Job Satisfaction");
+		topic.setDescription("How the people feel about their job and profession?");
+		topic.setSurveyor(surveyorService.getSurveyorDetails("BellO"));
+		topic.setSurveys(null);
+		topicList.add(topic);
+		//*************************************//
+		topic = new Topic();
+		topic.setName("Exit Survey");
+		topic.setDescription("How the user feels after the end of a particular event?");
+		topic.setSurveyor(surveyorService.getSurveyorDetails("dav_aus"));
+		topic.setSurveys(null);
+		topicList.add(topic);
+		//*************************************//
+		topicRepository.saveAll(topicList);
+	}
 
+	@Override
+	public Topic changeSurveyor(long topicId, long SurveyorId) {
+		Topic topic = topicRepository.findById(topicId).get();
+		topic.setSurveyor(surveyorService.getSurveyorDetails(SurveyorId));
+		topicRepository.save(topic);
+		return topic;
+	}
+	
 	
 }

@@ -25,11 +25,11 @@ public class Feedback {
     private LocalDateTime postedDateTime;
 	
 	@JsonBackReference
-	@ManyToOne(fetch = FetchType.EAGER, optional = false, cascade = CascadeType.ALL)
+	@ManyToOne(fetch = FetchType.LAZY, optional = false, cascade = CascadeType.ALL)
 	@JoinColumn(referencedColumnName = "id")
 	private Survey survey;
 	@JsonBackReference
-	@ManyToOne(fetch = FetchType.EAGER, optional = false, cascade = CascadeType.ALL)
+	@ManyToOne(fetch = FetchType.LAZY, optional = false, cascade = CascadeType.ALL)
 	@JoinColumn(referencedColumnName = "id")
     private Participant participant;
 	
