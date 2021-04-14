@@ -16,8 +16,8 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table
-public class Surveyor {
-
+public class Participant {
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
@@ -27,23 +27,24 @@ public class Surveyor {
     private String firstName;
 	@Column(nullable = false, length = 20)
     private String lastName;
+	
 	@JsonManagedReference
-    @OneToMany(mappedBy="surveyor", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private List<Survey> surveys;
-	
-	public Surveyor() {
-		super();
-	}
-	
-	public Surveyor(Long id, String username, String firstName, String lastName, List<Survey> surveys) {
+    @OneToMany(mappedBy="participant", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private List<Feedback> feedback;
+
+	public Participant(Long id, String username, String firstName, String lastName, List<Feedback> feedback) {
 		super();
 		this.id = id;
 		this.username = username;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.surveys = surveys;
+		this.feedback = feedback;
 	}
-	
+
+	public Participant() {
+		super();
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -76,17 +77,21 @@ public class Surveyor {
 		this.lastName = lastName;
 	}
 
-	public List<Survey> getSurveys() {
-		return surveys;
+	public List<Feedback> getFeedback() {
+		return feedback;
 	}
 
-	public void setSurveys(List<Survey> surveys) {
-		this.surveys = surveys;
+	public void setFeedback(List<Feedback> feedback) {
+		this.feedback = feedback;
 	}
 
 	@Override
 	public String toString() {
-		return "Surveyor [id=" + id + ", username=" + username + ", firstName=" + firstName + ", lastName=" + lastName
-				+ ", surveys=" + surveys + "]";
+		return "Participant [id=" + id + ", username=" + username + ", firstName=" + firstName + ", lastName="
+				+ lastName + "]";
 	}
+
+	
+	
+	
 }

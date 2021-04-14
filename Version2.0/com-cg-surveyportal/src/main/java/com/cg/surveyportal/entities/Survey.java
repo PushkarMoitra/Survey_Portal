@@ -1,6 +1,7 @@
 package com.cg.surveyportal.entities;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -11,9 +12,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table
@@ -34,24 +37,30 @@ public class Survey {
 	@ManyToOne(fetch = FetchType.EAGER, optional = true, cascade = CascadeType.ALL)
 	@JoinColumn(name = "topic")
     private Topic topic;
-//  @ManyToOne
-//  private Surveyor surveyor;
-//  @OneToMany(mappedBy="survey")
-//  private List<Question> questions; 
+	@JsonBackReference
+	@ManyToOne(fetch = FetchType.EAGER, optional = true, cascade = CascadeType.ALL)
+	@JoinColumn(name = "id", insertable = false, updatable = false)
+    private Surveyor surveyor;
+	@JsonManagedReference
+    @OneToMany(mappedBy="survey", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	private List<Question> questions; 
 	
 	
 	//Constructors
 	public Survey() {
 	}
-	public Survey(Long id, String description, LocalDateTime publishedDateTime, LocalDateTime endDateTime, Boolean isActive, Topic topic) {
-	super();
-	this.id = id;
-	this.description = description;
-	this.publishedDateTime = publishedDateTime;
-	this.endDateTime = endDateTime;
-	this.topic = topic;
+	public Survey(Long id, String description, LocalDateTime publishedDateTime, LocalDateTime endDateTime,
+			Boolean isActive, Topic topic, Surveyor surveyor, List<Question> questions) {
+		super();
+		this.id = id;
+		this.description = description;
+		this.publishedDateTime = publishedDateTime;
+		this.endDateTime = endDateTime;
+		this.isActive = isActive;
+		this.topic = topic;
+		this.surveyor = surveyor;
+		this.questions = questions;
 	}
-	
 	//Getters and setters
 	public Long getId() {
 		return id;
@@ -89,10 +98,23 @@ public class Survey {
 	public void setTopic(Topic topic) {
 		this.topic = topic;
 	}
-	
+	public Surveyor getSurveyor() {
+		return surveyor;
+	}
+	public void setSurveyor(Surveyor surveyor) {
+		this.surveyor = surveyor;
+	}
+	public List<Question> getQuestions() {
+		return questions;
+	}
+	public void setQuestions(List<Question> questions) {
+		this.questions = questions;
+	}
 	@Override
 	public String toString() {
 		return "Survey [id=" + id + ", description=" + description + ", publishedDateTime=" + publishedDateTime
-				+ ", endDateTime=" + endDateTime + ", isActive=" + isActive + ", topic=" + topic + "]";
+				+ ", endDateTime=" + endDateTime + ", isActive=" + isActive + ", topic=" + topic + ", surveyor="
+				+ surveyor + ", questions=" + questions + "]";
 	}
+	
 }
