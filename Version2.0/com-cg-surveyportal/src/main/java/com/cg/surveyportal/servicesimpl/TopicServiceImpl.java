@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.cg.surveyportal.entities.Survey;
 import com.cg.surveyportal.entities.Topic;
+import com.cg.surveyportal.exceptions.SurveyorNotFoundException;
 import com.cg.surveyportal.exceptions.TopicNotFoundException;
 import com.cg.surveyportal.repositories.ITopicRepository;
 import com.cg.surveyportal.services.ISurveyorService;
@@ -23,15 +24,14 @@ public class TopicServiceImpl implements ITopicService {
 	
 	@Override
 	public Topic getTopicDetails(long id) throws TopicNotFoundException {
-		//return topicRepository.findById(id).get();
 		return topicRepository.findById(id).orElseThrow(()-> new TopicNotFoundException("Topic with id:"+id+" does not exist"));
 	}
 
 	@Override
 	public List<Topic> getTopicsDetails(String name) throws TopicNotFoundException {
-		return Optional.of(topicRepository.findByName(name)).orElseThrow(()-> new TopicNotFoundException("Topic with name \""+name+"\" does not exist"));
+		List<Topic> listName = Optional.of(topicRepository.findByName(name)).orElseThrow(()-> new TopicNotFoundException("Topic with name \""+name+"\" does not exist"));
+		return listName;
 	}
-	
 	@Override
 	public List<Topic> getAllTopic() {
 		return topicRepository.findAll();
@@ -57,11 +57,13 @@ public class TopicServiceImpl implements ITopicService {
 	}
 
 	@Override
-	public Topic addTopic(String name, String description, String surveyorUsername){
+	public Topic addTopic(String name, String description, String surveyorUsername) throws SurveyorNotFoundException{
 		Topic newTopic = new Topic();
 		newTopic.setName(name);
 		newTopic.setDescription(description);
 		newTopic.setSurveyor(surveyorService.getSurveyorDetails(surveyorUsername));
+		if(newTopic.getSurveyor() == null)
+				throw new SurveyorNotFoundException("Surveyor with username: "+surveyorUsername+" does not exist");
 		topicRepository.save(newTopic);
 		return newTopic;
 	}
@@ -86,8 +88,7 @@ public class TopicServiceImpl implements ITopicService {
 	public long getSurveyCountOnTopic(String name) throws TopicNotFoundException {
 		return this.getTopicsDetails(name).get(0).getSurveys().size();
 	}
-
-
+	
 //	@Override
 //	public void populateTopic() {
 //	@Autowired

@@ -15,9 +15,8 @@ public interface ITopicService {
     public Topic addTopic(String name, String description, String surveyorUsername) throws SurveyorNotFoundException;
     public Topic updateTopicName(long id, String name) throws TopicNotFoundException;
     public Topic updateTopicDescription(long id, String description) throws TopicNotFoundException;
-    
+  //public void populateTopic();
     public List<Topic> getAllTopic();
-    //public void populateTopic();
     public long getTopicCount();
     public long getSurveyCountOnTopic(String name) throws TopicNotFoundException;
 	public void addSurveysToTopic(Survey survey, String name) throws TopicNotFoundException;
