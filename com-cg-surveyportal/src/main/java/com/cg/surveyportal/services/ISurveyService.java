@@ -15,4 +15,5 @@ public interface ISurveyService {
 	public Survey add(Survey survey) throws InvalidSurveyException;
 	public void deleteAllsurveys();
 	void removeSurveyById(Long id) throws SurveyNotFoundException;
+	void closeSurvey(long id) throws SurveyNotFoundException;
 }

@@ -108,4 +108,8 @@ public class SurveyServiceImpl implements ISurveyService {
 	public void removeSurveyById(Long id) throws SurveyNotFoundException {
 		surveyRepository.deleteById(id);
 	}
+	@Override
+	public void closeSurvey(long id) throws SurveyNotFoundException {
+		this.getSurveyById(id).setIsActive(false);
+	}
 }
