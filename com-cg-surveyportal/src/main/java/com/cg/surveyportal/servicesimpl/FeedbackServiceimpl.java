@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.cg.surveyportal.entities.Feedback;
 import com.cg.surveyportal.exceptions.ParticipantNotFoundException;
+import com.cg.surveyportal.exceptions.SurveyNotFoundException;
 import com.cg.surveyportal.repositories.IFeedbackRepository;
 import com.cg.surveyportal.services.IFeedbackService;
 import com.cg.surveyportal.services.IParticipantService;
@@ -28,7 +29,7 @@ public class FeedbackServiceimpl implements IFeedbackService {
 	IQuestionService questionService;
 	
 	@Override
-	public void populateFeedback() throws ParticipantNotFoundException {
+	public void populateFeedback() throws ParticipantNotFoundException, SurveyNotFoundException {
 		
 		Feedback feedback = new Feedback();
 		feedback.setPostedDateTime(LocalDateTime.of(2021,Month.APRIL, 9, 05, 29, 10));

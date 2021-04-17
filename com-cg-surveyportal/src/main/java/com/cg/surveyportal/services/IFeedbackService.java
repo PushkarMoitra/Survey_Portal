@@ -5,11 +5,12 @@ import java.util.List;
 
 import com.cg.surveyportal.entities.Feedback;
 import com.cg.surveyportal.exceptions.ParticipantNotFoundException;
+import com.cg.surveyportal.exceptions.SurveyNotFoundException;
 
 
 public interface IFeedbackService {
 	
-	public void populateFeedback() throws ParticipantNotFoundException;
+	public void populateFeedback() throws ParticipantNotFoundException, SurveyNotFoundException;
 	public List<Feedback> getAll();
 	Feedback getById(long id) ;
 	List<Feedback> getFeedbackDetails();

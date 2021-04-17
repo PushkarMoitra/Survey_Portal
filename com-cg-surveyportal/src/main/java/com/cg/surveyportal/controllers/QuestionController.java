@@ -50,7 +50,7 @@ public class QuestionController {
 	}
 	
 	@PostMapping("/add/{questionText}/{surveyId}")
-	private void addQuestion(@PathVariable("questionText") String questionText, @PathVariable("surveyId") long surveyId){
+	private void addQuestion(@PathVariable("questionText") String questionText, @PathVariable("surveyId") long surveyId) throws SurveyNotFoundException{
 		questionService.addQuestion(questionText, surveyId);
 	}
 }

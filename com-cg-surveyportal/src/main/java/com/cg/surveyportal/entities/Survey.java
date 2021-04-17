@@ -12,8 +12,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table
@@ -31,13 +30,13 @@ public class Survey {
 	@Column
     private Boolean isActive;
 	@ManyToOne
-	@JsonBackReference("topic_surveys")
+	@JsonIgnore//@JsonBackReference("topic_surveys")
     private Topic topic;
 	@ManyToOne
-	@JsonBackReference("surveyor_surveys")
+	@JsonIgnore//@JsonBackReference("surveyor_surveys")
     private Surveyor surveyor;
 	@OneToMany(mappedBy="survey")
-	@JsonManagedReference("surveys_feedback")
+	@JsonIgnore//@JsonManagedReference("surveys_feedback")
 	private List<Feedback> feedback;
 	
 	//Constructors

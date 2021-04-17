@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cg.surveyportal.entities.Feedback;
 import com.cg.surveyportal.exceptions.ParticipantNotFoundException;
+import com.cg.surveyportal.exceptions.SurveyNotFoundException;
 import com.cg.surveyportal.services.IFeedbackService;
 
 @RestController
@@ -19,7 +20,7 @@ public class FeedbackController {
 	IFeedbackService feedbackService; 
 	
 	@GetMapping("/populate")
-	private void populate() throws ParticipantNotFoundException
+	private void populate() throws ParticipantNotFoundException, SurveyNotFoundException
 	{
 		feedbackService.populateFeedback();
 	}

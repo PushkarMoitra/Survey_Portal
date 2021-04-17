@@ -67,8 +67,8 @@ public class TopicServiceImpl implements ITopicService {
 		newTopic.setName(name);
 		newTopic.setDescription(description);
 		newTopic.setSurveyor(surveyorService.getByUsername(surveyorUsername));
-//		if(newTopic.getSurveyor() == null)
-//				throw new SurveyorNotFoundException("Surveyor with username: "+surveyorUsername+" does not exist");
+		if(newTopic.getSurveyor() == null)
+				throw new SurveyorNotFoundException("Surveyor with username: "+surveyorUsername+" does not exist");
 		topicRepository.save(newTopic);
 		return newTopic;
 	}

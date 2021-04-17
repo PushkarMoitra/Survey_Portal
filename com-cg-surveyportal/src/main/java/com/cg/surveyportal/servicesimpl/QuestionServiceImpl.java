@@ -4,6 +4,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.cg.surveyportal.entities.Question;
+import com.cg.surveyportal.exceptions.SurveyNotFoundException;
 import com.cg.surveyportal.repositories.IQuestionRepository;
 import com.cg.surveyportal.services.IQuestionService;
 import com.cg.surveyportal.services.ISurveyService;
@@ -39,7 +40,7 @@ public class QuestionServiceImpl implements IQuestionService {
 		return (List<Question>) questionRepository.findAll();
 	}
 	@Override
-	public void populate() {
+	public void populate() throws SurveyNotFoundException {
 		Question question = new Question();
     	question.setQuestionText("How would you rate your experience with our product?");
 		this.setOptionDefault(question);
@@ -72,7 +73,7 @@ public class QuestionServiceImpl implements IQuestionService {
 		question.setOption4("Very dissatisfied");
 	}
 	@Override
-	public Question addQuestion(String questionText, Long surveyId) {
+	public Question addQuestion(String questionText, Long surveyId) throws SurveyNotFoundException {
 		Question newQuestion = new Question();
 		newQuestion.setqId(201l);
 		newQuestion.setQuestionText(questionText);

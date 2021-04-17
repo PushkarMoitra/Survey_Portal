@@ -5,13 +5,17 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cg.surveyportal.entities.Survey;
-import com.cg.surveyportal.exceptions.TopicNotFoundException;
+import com.cg.surveyportal.exceptions.InvalidSurveyException;
+import com.cg.surveyportal.exceptions.SurveyNotFoundException;
 import com.cg.surveyportal.services.ISurveyService;
-import com.cg.surveyportal.services.ITopicService;
 
 @RestController
 @RequestMapping("/survey")
@@ -19,39 +23,48 @@ public class SurveyControllers {
 	
 	@Autowired
 	private ISurveyService surveyService;
-	@Autowired
-	private ITopicService topicService;
 	
-	@GetMapping("/populate")
-	private void populateSurvey() throws TopicNotFoundException {
-		surveyService.populateSurvey();
-	}
+//	@GetMapping("/populate")
+//	private void populateSurvey() throws TopicNotFoundException {
+//		surveyService.populateSurvey();
+//	}
 	
+	//creating a get mapping that retrieves the details of all Surveys
 	@GetMapping("/allsurveys")
 	private List<Survey> getAllSurveys() {
 		return surveyService.getAllSurveys();
 	}
 	
-	@DeleteMapping
-	private void deleteAllsurveys()
+	//creating a get mapping that shows the Survey details by surveyId
+	@GetMapping("/getbyid/{surveyId}")
+    private Survey getSurveyById(@PathVariable("surveyId") Long surveyId) throws SurveyNotFoundException
 	{
-		surveyService.deleteAllsurveys();
+			return surveyService.getSurveyById(surveyId);
 	}
 	
-	@GetMapping("/addsurveytotopic")
-	private void addSurveyToTopic() throws TopicNotFoundException
-	{
-		Survey survey = new Survey();
-		survey.setDescription("This survey is on Java programming.");
-		survey.setIsActive(true);
-		
- 		
-		topicService.addSurveysToTopic(surveyService.getSurveyById(7), "Programming");
+	//creating a delete mapping that delete all the surveys present
+//	@DeleteMapping("/delete/all")
+//	private void deleteAllsurveys()
+//	{
+//		surveyService.deleteAllsurveys();
+//	}
+	
+	//creating a delete mapping that deletes a specified Survey
+	@DeleteMapping("/remove/{id}")
+	private void removeSurveyById(@PathVariable("id") long id) throws SurveyNotFoundException {
+		surveyService.removeSurveyById(id);
 	}
 	
+	//creating put mapping that updates the Survey details
+	@PutMapping("/update/{surveyId}/{description}")
+	private Survey updateSurveyDescription(@PathVariable("surveyId") Long surveyId,@PathVariable("description") String description) throws SurveyNotFoundException {
+		return surveyService.updateSurveyDescription(surveyId,description);
+	}
 	
-	
-	
-	
-	
+	//creating post mapping that post the Survey detail in the database
+	@PostMapping("/add")
+	private Survey add(@RequestBody Survey survey) throws InvalidSurveyException {
+		surveyService.add(survey);
+		return survey;
+	}
 }
