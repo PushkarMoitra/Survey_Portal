@@ -98,5 +98,4 @@ public class Feedback {
 		return "Feedback [id=" + id + ", postedDateTime=" + postedDateTime + ", survey=" + survey + ", participant="
 				+ participant + ", question=" + question + ", chosenOption=" + chosenOption + "]";
 	}
-	
 }

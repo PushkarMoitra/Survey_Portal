@@ -1,7 +1,9 @@
-plugins {
+/*plugins {
     id 'org.springframework.boot' version '2.4.4'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
+    id "org.sonarqube" version "3.0"
+    id 'jacoco'
 }
 
 group = 'com-cg-spring-boot-demo'
@@ -37,3 +39,41 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+tasks['sonarqube'].dependsOn test*/
+plugins {
+    id 'org.springframework.boot' version '2.4.4'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+   id "org.sonarqube" version "3.0"
+   id 'jacoco'
+}
+
+group = 'com-cg-spring-boot-demo'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.4.1'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
+   
+    implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+    implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
+   
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.8.5'
+   
+    implementation group: 'com.oracle.database.jdbc', name: 'ojdbc8', version: '19.8.0.0'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+
+    useJUnitPlatform()
+}
+
+tasks['sonarqube'].dependsOn test

@@ -1,10 +1,14 @@
 package com.cg.surveyportal.exceptions;
 
-import java.util.concurrent.Executors;
 
 public class FeedbackNotFoundException extends Exception {
 
-    public FeedbackNotFoundException(){
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public FeedbackNotFoundException(){
 
     }
 
