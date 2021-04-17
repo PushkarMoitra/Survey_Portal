@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cg.surveyportal.entities.Feedback;
-import com.cg.surveyportal.entities.Participant;
 import com.cg.surveyportal.exceptions.ParticipantNotFoundException;
 import com.cg.surveyportal.repositories.IFeedbackRepository;
 import com.cg.surveyportal.services.IFeedbackService;
@@ -72,5 +71,47 @@ public class FeedbackServiceimpl implements IFeedbackService {
 	@Override
 	public List<Feedback> getAll() {
 		return feedbackRepository.findAll();
+	}
+	
+	@Override
+	public Feedback getById(long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Feedback removeById(Long feedbackId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Feedback updateFeedback(long feedbackId, String feedbackText) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Feedback addFeedbackText(String text) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Feedback> getFeedbackDetails() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void populate() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setOptionDefault(Feedback feedback) {
+		// TODO Auto-generated method stub
+		
 	}
 }

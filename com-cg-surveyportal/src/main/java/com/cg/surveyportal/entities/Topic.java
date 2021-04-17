@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -23,10 +24,10 @@ public class Topic {
     private String name;
 	@Column(length = 100)
     private String description;
-    @OneToMany(mappedBy="topic")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy="topic")
     @JsonManagedReference("topic_surveys")
     private List<Survey> surveys;
-	@OneToOne(optional = true)
+	@OneToOne(fetch = FetchType.EAGER, optional = true)
 	@JsonManagedReference("topic_surveyor")
 	private Surveyor surveyor;
 	

@@ -19,6 +19,8 @@ public interface ITopicService {
     public List<Topic> getAllTopic();
     public long getTopicCount();
     public long getSurveyCountOnTopic(String name) throws TopicNotFoundException;
-	public void addSurveysToTopic(Survey survey, String name) throws TopicNotFoundException;
-	public Topic changeSurveyor(long topicId, long SurveyorId);
+	public void addSurveysToTopic(Survey survey, String topicName) throws TopicNotFoundException;
+	public Topic changeSurveyor(long topicId, long SurveyorId) throws TopicNotFoundException, SurveyorNotFoundException;
+	public List<Topic> getTopicsWithNoSurveys();
+	
 }

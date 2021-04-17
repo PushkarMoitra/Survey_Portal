@@ -18,12 +18,6 @@ public class FeedbackController {
 	@Autowired
 	IFeedbackService feedbackService; 
 	
-	@GetMapping("/hello")
-	private String hello()
-	{
-		return "Hello";
-	}
-	
 	@GetMapping("/populate")
 	private void populate() throws ParticipantNotFoundException
 	{

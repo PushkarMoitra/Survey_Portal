@@ -23,59 +23,34 @@ public class QuestionController {
 
 	@Autowired
 	IQuestionService questionService;
-	
-	@GetMapping("/populate")
-	private void populate()
-	{
-		questionService.populate();
-	}
-	
-	
-	
-	
-	@GetMapping("/All")
-	private List<Question> getQuestionDetails()
-	{
+//	
+//	@GetMapping("/populate")
+//	private void populate()
+//	{
+//		questionService.populate();
+//	}
+	@GetMapping("/all")
+	private List<Question> getQuestionDetails(){
 		return questionService.getQuestionDetails();
 	}
 	
-	/*@PostMapping("/createquestion/{name}")
-	private Question createQuestion(@PathVariable("name") String name) throws InvalidQuestionTextException, SurveyNotFoundException, InvalidSurveyException
-	{
-		return questionService.createQuestion(name, null);
-	}*/
-	
 	@GetMapping("/findById/{id}")
-	private Question getfindById(@PathVariable("id") long id) throws QuestionNotFoundException
-	{
+	private Question getfindById(@PathVariable("id") long id) throws QuestionNotFoundException{
 		return questionService.getById(id);
 	}
 	
-	@PutMapping("/updateQuestion/{id}/{updatetext}")
-	private Question updateQuestion(@PathVariable("id") long id, @PathVariable("updatetext") String updatetext) throws InvalidQuestionTextException, SurveyNotFoundException, InvalidSurveyException
-	
-	{
-		
+	@PutMapping("/update/{id}/{updatetext}")
+	private Question updateQuestion(@PathVariable("id") long id, @PathVariable("updatetext") String updatetext) throws InvalidQuestionTextException, SurveyNotFoundException, InvalidSurveyException{
 		return questionService.updateQuestion(id, updatetext);
 	}
 	
-	@DeleteMapping("/removeById/{removeId}")
-	private Question removeById(@PathVariable("removeId") long removeId)
-	{
+	@DeleteMapping("/remove/{removeId}")
+	private Question removeById(@PathVariable("removeId") long removeId){
 		return questionService.removeById(removeId);
 	}
 	
-//	@PostMapping("/addQuestion/{text}/{option}")
-//	private void addQuestion(@PathVariable("text") String text,@RequestBody List<Option> option)
-//	{
-//		questionService.addQuestion(text, option);
-//	}
-	
-	@PostMapping("/addQuestionText/{text}")
-	private void addQuestionText(@PathVariable("text") String text)
-	{
-		questionService.addQuestionText(text);
+	@PostMapping("/add/{questionText}/{surveyId}")
+	private void addQuestion(@PathVariable("questionText") String questionText, @PathVariable("surveyId") long surveyId){
+		questionService.addQuestion(questionText, surveyId);
 	}
-	
-	
 }

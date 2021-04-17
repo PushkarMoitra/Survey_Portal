@@ -7,13 +7,11 @@ import com.cg.surveyportal.entities.Question;
 
 public interface IQuestionService {
 
-    Question getById(long id) ;
-	List<Question> getQuestionDetails();
-    Question removeById(Long questionId);
-	Question updateQuestion(long questionId,String questionText);
-	//void addQuestion (String text, List<Option> option);
-	void addQuestionText (String text);
-	//Question createQuestion(String questionText, List<Option> options);
+    public Question getById(long id) ;
+    public List<Question> getQuestionDetails();
+    public Question removeById(Long questionId);
+    public Question updateQuestion(long questionId,String questionText);
 	public void populate();
+	public Question addQuestion(String questionText, Long surveyId);
 	public void setOptionDefault(Question question);
 }

@@ -32,12 +32,11 @@ public class TopicController {
 //	}
 	
 	@GetMapping("/alltopics")
-	private ResponseEntity<List<Topic>> fetchAllTopics() 
+	private ResponseEntity<List<Topic>> getAllTopics() 
 	{
 		return new ResponseEntity<List<Topic>>(topicService.getAllTopic(), HttpStatus.OK);
 	}
 
-	
 	@GetMapping("/topicbyid/{id}")
 	private ResponseEntity<Topic> getTopicById(@PathVariable("id") long id) throws TopicNotFoundException
 	{
@@ -62,6 +61,12 @@ public class TopicController {
 	{
 		return new ResponseEntity<Long>(topicService.getSurveyCountOnTopic(name), HttpStatus.FOUND);
 	}
+	
+	@GetMapping("/topicwithnosurvey")
+	private ResponseEntity<List<Topic>> getTopicsWithNoSurveys() 
+	{
+		return new ResponseEntity<List<Topic>>(topicService.getTopicsWithNoSurveys(), HttpStatus.OK);
+	}
 
 	@PostMapping("/addtopic/{name}/{description}/{surveyorUsername}")
 	private ResponseEntity<Topic> addNewTopic(@PathVariable("name") String name, @PathVariable("description") String description, @PathVariable("surveyorUsername") String surveyorUsername ) throws SurveyorNotFoundException
@@ -81,7 +86,7 @@ public class TopicController {
 		return new ResponseEntity<Topic>(topicService.updateTopicDescription(id, description), HttpStatus.OK);
 	}
 	@PutMapping("/modify/surveyor/{id}/{surveyorid}")
-	private ResponseEntity<Topic> modifyTopicSurveyor(@PathVariable("id") long id, @PathVariable("surveyorid") long surveyorid)
+	private ResponseEntity<Topic> modifyTopicSurveyor(@PathVariable("id") long id, @PathVariable("surveyorid") long surveyorid) throws TopicNotFoundException, SurveyorNotFoundException
 	{
 		return new ResponseEntity<Topic>(topicService.changeSurveyor(id, surveyorid), HttpStatus.OK);
 	}

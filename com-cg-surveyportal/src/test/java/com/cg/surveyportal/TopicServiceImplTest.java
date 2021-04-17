@@ -151,12 +151,23 @@ public class TopicServiceImplTest {
 	}
 	@Test
 	@DisplayName("Negative testcase for updating topic description")
-	public void UpdateTopicDescriptionNegative() throws TopicNotFoundException {
+	public void testUpdateTopicDescriptionNegative() throws TopicNotFoundException {
 		String newTopicDescription = "Surveys on daily city life of us.";
 		String oldTopicDescription = topic.getName();
 		topic.setName(newTopicDescription);
 		Mockito.when(topicRepository.save(topic)).thenReturn(topic);
 		assertNotEquals(topic.getDescription(),oldTopicDescription);
 	}
-
+	@Test
+	@DisplayName("Posivite testcase for geting topics with no surveys")
+	public void testGetTopicsWithNoSurveys() {
+		Mockito.when(topicService.getTopicsWithNoSurveys()).thenReturn(Stream.of(topic).collect(Collectors.toList()));
+		assertEquals(1,topicService.getAllTopic().size());
+	}
+	@Test
+	@DisplayName("Negative testcase for geting topics with no surveys")
+	public void testGetTopicsWithNoSurveysNegative() {
+		Mockito.when(topicService.getTopicsWithNoSurveys()).thenReturn(Stream.of(topic).collect(Collectors.toList()));
+		assertNotEquals(0,topicService.getAllTopic().size());
+	}
 }

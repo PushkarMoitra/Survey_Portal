@@ -19,61 +19,25 @@ public class QuestionServiceImpl implements IQuestionService {
 	@Override
 	public Question getById(long questionId) {
     Question questionById = questionRepository.findById(questionId).get();
-		
 		return questionById;
 	}
-
 	@Override
    public Question updateQuestion(long questionId,String questionText){
-		    Question updateQuestion = questionRepository.findById(questionId).get();
-			updateQuestion.setQuestionText(questionText);
-			questionRepository.save(updateQuestion);
+		Question updateQuestion = questionRepository.findById(questionId).get();
+	    updateQuestion.setQuestionText(questionText);
+		questionRepository.save(updateQuestion);
 		return updateQuestion;
 	}
-
 	@Override
 	public Question removeById(Long questionId) {
-		
 		Question deletedQuestion = questionRepository.findById(questionId).get();
 		questionRepository.deleteById(questionId);
 		return deletedQuestion;
 	}
-
 	@Override
 	public List<Question> getQuestionDetails() {
-		// TODO Auto-generated method stub
 		return (List<Question>) questionRepository.findAll();
 	}
-
-//	@Override
-//	public void addQuestion(String text, List<Option> option) {
-//		// TODO Auto-generated method stub
-//		Question question = new Question();
-//		this.setOptionDefault(question);
-//		question.setQuestionText(text);
-//		questionRepository.save(question);
-//	}
-	
-	public void addQuestionText(String text) {
-		Question question = new Question();
-		question.setQuestionText(text);
-		questionRepository.save(question);
-	}
-	
-//	@Override
-//	public Question createQuestion( String questionText, List<Option> options) {
-//			
-//		
-//		Question newQuestion = new Question();
-//		//newQuestion.setSurvey(survey);
-//		newQuestion.setQuestionText(questionText);
-//		//newQuestion.setOptions(options);
-//		
-//		questionRepository.save(newQuestion);
-//		
-//		return newQuestion;
-//	}
-
 	@Override
 	public void populate() {
 		Question question = new Question();
@@ -100,13 +64,22 @@ public class QuestionServiceImpl implements IQuestionService {
 		question.setSurvey(surveyService.getSurveyById(18));
 		questionRepository.save(question);
 	}
-
 	@Override
 	public void setOptionDefault(Question question) {
 		question.setOption1("Very satisfied");
 		question.setOption2("Satisfied");
 		question.setOption3("Dissatisfied");
 		question.setOption4("Very dissatisfied");
+	}
+	@Override
+	public Question addQuestion(String questionText, Long surveyId) {
+		Question newQuestion = new Question();
+		newQuestion.setqId(201l);
+		newQuestion.setQuestionText(questionText);
+		this.setOptionDefault(newQuestion);
+		newQuestion.setSurvey(surveyService.getSurveyById(surveyId));
+		questionRepository.save(newQuestion);
+		return newQuestion;
 	}
 
 
