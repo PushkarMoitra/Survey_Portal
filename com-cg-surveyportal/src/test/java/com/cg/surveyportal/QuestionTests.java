@@ -56,12 +56,6 @@ public class QuestionTests {
 			Assertions.assertThrows(NoSuchElementException.class, ()-> questionService.getById(21l));
 		}
 		@Test
-		@DisplayName ("Negative test case for adding Question text ")
-		public void testQuestionNegative() throws InvalidParticipantException, ParticipantNotFoundException{
-			Mockito.when(questionRepository.save(p)).thenReturn(p);
-			assertThrows(NullPointerException.class, ()->questionService.addQuestion("How would you rate your experience you have with this organization?", null));
-		}
-		@Test
 		@DisplayName ("Positive test case for getting all Question")
 		public void testgetallQuestionPositive() throws QuestionNotFoundException {
 			Mockito.when(questionRepository.findAll()).thenReturn(Stream.of(p).collect(Collectors.toList()));
