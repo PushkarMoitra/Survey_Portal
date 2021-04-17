@@ -5,8 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cg.surveyportal.entities.Survey;
 import com.cg.surveyportal.entities.Surveyor;
+import com.cg.surveyportal.exceptions.InvalidSurveyorException;
+import com.cg.surveyportal.exceptions.SurveyorNotFoundException;
 import com.cg.surveyportal.repositories.ISurveyorRepository;
 import com.cg.surveyportal.services.ISurveyorService;
 @Service
@@ -76,41 +77,67 @@ public class SurveyorServiceImpl implements ISurveyorService {
 		/*----------------------------------------------*/
 	}
 
+
 	@Override
-	public List<Surveyor> getAllSurveyor() {
+	public List<Surveyor> getAllSurveyors() {
 		return surveyorRepository.findAll();
+		
 	}
 
+
 	@Override
-	public Surveyor getSurveyorDetails(String userName) {
-		return surveyorRepository.findByUsername(userName);
+	public Surveyor getById(Long surveyorId) throws SurveyorNotFoundException {
+		
+		return surveyorRepository.findById(surveyorId).orElseThrow(()-> new SurveyorNotFoundException("Invalid Surveyor Id"));
 	}
+
 	
-	public Surveyor getSurveyorDetails(long id) {
-		return surveyorRepository.findById(id).get();
+
+	@Override
+	public Surveyor getByUsername(String username) throws InvalidSurveyorException {
+		
+		Surveyor sv = surveyorRepository.findByUsername(username);
+		if(sv == null)
+		{
+			throw new InvalidSurveyorException("Invalid Username");
+		}
+		return sv;
 	}
 
 	@Override
-	public void removeById(long id) {
-		Surveyor surveyor = surveyorRepository.findById(id).get();
-		surveyor.setSurveys(null);
-		surveyorRepository.deleteById(id);
+	public String removeById(Long surveyorId) throws InvalidSurveyorException {
+		
+		Surveyor sv = surveyorRepository.findById(surveyorId).orElseThrow(()-> new InvalidSurveyorException("Invalid Surveyor Id"));
+		surveyorRepository.deleteById(sv.getId());
+		return "Data Deleted Successfully";
+		
 	}
 
 	@Override
-	public void addSurveyor(String firstName, String lastName, String username) {
-			Surveyor serveyor = new Surveyor();
-			serveyor.setFirstName(firstName);
-			serveyor.setLastName(lastName);
-			serveyor.setUsername(username);
-			serveyor.setSurveys(null);
-			surveyorRepository.save(serveyor);
+	public String add(Surveyor surveyor) throws InvalidSurveyorException {
+		
+		surveyorRepository.save(surveyor);
+		return "Surveyor Added Successfully";
 	}
 
 	@Override
-	public void addSurveysToSurveyor(Survey survey, long id) {
-		Surveyor surveyor = surveyorRepository.findById(id).get();
-		surveyor.getSurveys().add(survey);
+	public String update(Surveyor surveyor) throws InvalidSurveyorException, SurveyorNotFoundException {
+		
+		surveyorRepository.save(surveyor);
+		return "Surveyor Updated Successfully";
+	}
+
+	@Override
+	public Long getRecordsCount() {
+		
+		return surveyorRepository.count();
+	}
+
+	@Override
+	public String removeAllRecords() {
+		
+		surveyorRepository.deleteAll();
+		return "All Records Deleted ";
 	}
 
 

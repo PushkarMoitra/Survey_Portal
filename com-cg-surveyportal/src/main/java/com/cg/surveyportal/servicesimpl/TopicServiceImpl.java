@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import com.cg.surveyportal.entities.Survey;
 import com.cg.surveyportal.entities.Surveyor;
 import com.cg.surveyportal.entities.Topic;
+import com.cg.surveyportal.exceptions.InvalidSurveyorException;
 import com.cg.surveyportal.exceptions.SurveyorNotFoundException;
 import com.cg.surveyportal.exceptions.TopicNotFoundException;
 import com.cg.surveyportal.repositories.ITopicRepository;
@@ -60,12 +61,12 @@ public class TopicServiceImpl implements ITopicService {
 	}
 
 	@Override
-	public Topic addTopic(String name, String description, String surveyorUsername) throws SurveyorNotFoundException{
+	public Topic addTopic(String name, String description, String surveyorUsername) throws SurveyorNotFoundException, InvalidSurveyorException{
 		Topic newTopic = new Topic();
 		newTopic.setId(101L);
 		newTopic.setName(name);
 		newTopic.setDescription(description);
-		newTopic.setSurveyor(surveyorService.getSurveyorDetails(surveyorUsername));
+		newTopic.setSurveyor(surveyorService.getByUsername(surveyorUsername));
 //		if(newTopic.getSurveyor() == null)
 //				throw new SurveyorNotFoundException("Surveyor with username: "+surveyorUsername+" does not exist");
 		topicRepository.save(newTopic);
@@ -94,48 +95,48 @@ public class TopicServiceImpl implements ITopicService {
 	}
 	
 	@Override
-	public void populateTopic() {
+	public void populateTopic() throws InvalidSurveyorException {
 		List<Topic> topicList = new ArrayList<>();
 
 		Topic topic = new Topic();
 		topic.setName("Product Feedback");
 		topic.setDescription("How the users are feeling about a particular product they brought?");
-		topic.setSurveyor(surveyorService.getSurveyorDetails("Dlee"));
+		topic.setSurveyor(surveyorService.getByUsername("Dlee"));
 		topic.setSurveys(null);
 		topicList.add(topic);
 		//*************************************//
 		topic = new Topic();
 		topic.setName("Employee Satisfaction");
 		topic.setDescription("How much satisfied the employees are with their organizational performance?");
-		topic.setSurveyor(surveyorService.getSurveyorDetails("MonsWill"));
+		topic.setSurveyor(surveyorService.getByUsername("MonsWill"));
 		topic.setSurveys(null);
 		topicList.add(topic);
 		//*************************************//
 		topic = new Topic();
     	topic.setName("Brand Awareness");
 		topic.setDescription("Checking the awareness of particular brand among the general public.");
-		topic.setSurveyor(surveyorService.getSurveyorDetails("JonesK"));
+		topic.setSurveyor(surveyorService.getByUsername("JonesK"));
 		topic.setSurveys(null);
 		topicList.add(topic);
 		//*************************************//
 		topic = new Topic();
 		topic.setName("Customer Satisfaction");
 		topic.setDescription("How much satisfied the customers are with the services they were provided?");
-		topic.setSurveyor(surveyorService.getSurveyorDetails("IMnayer"));
+		topic.setSurveyor(surveyorService.getByUsername("IMnayer"));
 		topic.setSurveys(null);
 		topicList.add(topic);
 		//*************************************//
 		topic = new Topic();
 		topic.setName("Job Satisfaction");
 		topic.setDescription("How the people feel about their job and profession?");
-		topic.setSurveyor(surveyorService.getSurveyorDetails("BellO"));
+		topic.setSurveyor(surveyorService.getByUsername("BellO"));
 		topic.setSurveys(null);
 		topicList.add(topic);
 		//*************************************//
 		topic = new Topic();
 		topic.setName("Exit Survey");
 		topic.setDescription("How the user feels after the end of a particular event?");
-		topic.setSurveyor(surveyorService.getSurveyorDetails("dav_aus"));
+		topic.setSurveyor(surveyorService.getByUsername("dav_aus"));
 		topic.setSurveys(null);
 		topicList.add(topic);
 		//*************************************//
@@ -144,7 +145,7 @@ public class TopicServiceImpl implements ITopicService {
 	@Override
 	public Topic changeSurveyor(long topicId, long SurveyorId) throws TopicNotFoundException, SurveyorNotFoundException {
 		Topic topic = Optional.of(topicRepository.findById(topicId).get()).orElseThrow(()-> new TopicNotFoundException("Topic with id:"+topicId+" does not exist"));
-		Surveyor surveyor = Optional.of(surveyorService.getSurveyorDetails(SurveyorId)).orElseThrow(()-> new SurveyorNotFoundException("Surveyor with id:"+SurveyorId+" does not exist"));
+		Surveyor surveyor = Optional.of(surveyorService.getById(SurveyorId)).orElseThrow(()-> new SurveyorNotFoundException("Surveyor with id:"+SurveyorId+" does not exist"));
 		topic.setSurveyor(surveyor);
 		topicRepository.save(topic);
 		return topic;

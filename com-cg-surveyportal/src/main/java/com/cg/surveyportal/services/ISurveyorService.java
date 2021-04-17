@@ -2,16 +2,18 @@ package com.cg.surveyportal.services;
 
 import java.util.List;
 
-import com.cg.surveyportal.entities.Survey;
 import com.cg.surveyportal.entities.Surveyor;
+import com.cg.surveyportal.exceptions.InvalidSurveyorException;
+import com.cg.surveyportal.exceptions.SurveyorNotFoundException;
 
 public interface ISurveyorService {
-
 	public void populateSurveyor();
-	public Surveyor getSurveyorDetails(long id);
-	public List<Surveyor> getAllSurveyor();
-	public Surveyor getSurveyorDetails(String userName);
-	public void removeById(long id);
-	public void addSurveyor(String firstName, String lastName, String username);
-	public void addSurveysToSurveyor(Survey survey, long id);
+	public Surveyor getById(Long surveyorId) throws SurveyorNotFoundException;
+	public List<Surveyor> getAllSurveyors();
+	public Surveyor getByUsername(String username) throws InvalidSurveyorException;
+	public String removeById(Long surveyorId) throws InvalidSurveyorException;
+	public String add(Surveyor surveyor) throws InvalidSurveyorException;
+	public String update(Surveyor surveyor)throws InvalidSurveyorException,SurveyorNotFoundException;
+	public Long getRecordsCount(); 
+	public String removeAllRecords();
 }

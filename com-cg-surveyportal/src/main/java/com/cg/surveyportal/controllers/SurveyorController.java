@@ -3,14 +3,20 @@ package com.cg.surveyportal.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cg.surveyportal.entities.Surveyor;
+import com.cg.surveyportal.exceptions.InvalidSurveyorException;
+import com.cg.surveyportal.exceptions.SurveyorNotFoundException;
 import com.cg.surveyportal.services.ISurveyorService;
 
 @RestController
@@ -26,33 +32,51 @@ public class SurveyorController {
 		surveyorService.populateSurveyor();
 	}
 	
-	@GetMapping("/allsurveyors")
-	private List<Surveyor> getAllSurveyors()
+	@GetMapping("/count")
+	public ResponseEntity<Long> countRecords()
 	{
-		return surveyorService.getAllSurveyor();
+		return new ResponseEntity<>(surveyorService.getRecordsCount(),HttpStatus.ACCEPTED);
+	}
+	
+	@GetMapping("/allsurveyors")
+	public ResponseEntity<List<Surveyor>> getAllSurveyors()
+	{
+		return new ResponseEntity<>( surveyorService.getAllSurveyors(),HttpStatus.ACCEPTED);
 	}
 	
 	@GetMapping("/findbyid/{id}")
-	private Surveyor getSurveyorById(@PathVariable("id") long id)
+	public ResponseEntity<Surveyor> getSurveyorById(@PathVariable("id") Long id) throws NumberFormatException, SurveyorNotFoundException
 	{
-		return surveyorService.getSurveyorDetails(id);
+		return new ResponseEntity<>(surveyorService.getById(id),HttpStatus.OK);
 	}
 	
 	@GetMapping("/findbyusername/{username}")
-	private Surveyor getSurveyorById(@PathVariable("username") String username)
+	public ResponseEntity<Surveyor> getSurveyorByUsername(@PathVariable("username") String username) throws InvalidSurveyorException
 	{
-		return surveyorService.getSurveyorDetails(username);
+		return new ResponseEntity<>(surveyorService.getByUsername(username),HttpStatus.ACCEPTED);
 	}
 	
 	@DeleteMapping("/delete/{id}")
-	private void deleteById(@PathVariable("id") long id)
+	public ResponseEntity<String> deleteById(@PathVariable("id") long id) throws InvalidSurveyorException
 	{
-		surveyorService.removeById(id);
+		return new ResponseEntity<>(surveyorService.removeById(id),HttpStatus.OK);
 	}
 	
-	@PostMapping("/add/{fname}/{lname}/{uname}")
-	private void addSurveyor(@PathVariable("fname") String fname, @PathVariable("lname") String lname, @PathVariable("uname") String uname)
+	@PostMapping("/add")
+	public ResponseEntity<String> addSurveyor(@RequestBody Surveyor surveyor) throws InvalidSurveyorException
 	{
-		surveyorService.addSurveyor(fname, lname, uname);
+		return new ResponseEntity<>(surveyorService.add(surveyor),HttpStatus.ACCEPTED);
+	}
+	
+//	@DeleteMapping("deleteAll")
+//	public ResponseEntity<String> deleteAllRecords()
+//	{
+//		return new ResponseEntity<>(surveyorService.removeAllRecords(),HttpStatus.OK);
+//	}
+	
+	@PutMapping("update")
+	public ResponseEntity<String> updateRecord(@RequestBody Surveyor surveyor) throws InvalidSurveyorException, SurveyorNotFoundException
+	{
+		return new ResponseEntity<>(surveyorService.update(surveyor),HttpStatus.OK);
 	}
  }
