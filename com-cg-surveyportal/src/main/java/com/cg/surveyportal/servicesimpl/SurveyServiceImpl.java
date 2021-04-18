@@ -110,6 +110,8 @@ public class SurveyServiceImpl implements ISurveyService {
 	}
 	@Override
 	public void closeSurvey(long id) throws SurveyNotFoundException {
-		this.getSurveyById(id).setIsActive(false);
+		Survey survey = this.getSurveyById(id);
+		survey.setIsActive(false);
+		surveyRepository.save(survey);
 	}
 }

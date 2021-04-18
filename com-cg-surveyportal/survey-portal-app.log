@@ -735,3 +735,589 @@ java.util.NoSuchElementException: No value present
 2021-04-18 19:54:58.669  INFO 22004 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2021-04-18 19:54:58.672  INFO 22004 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-04-18 19:54:58.682  INFO 22004 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-18 20:08:12.504  INFO 21448 --- [restartedMain] c.c.s.SurveyportalApplication            : Starting SurveyportalApplication using Java 13.0.2 on Predator with PID 21448 (C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal\bin\main started by P_Moitra in C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal)
+2021-04-18 20:08:12.507  INFO 21448 --- [restartedMain] c.c.s.SurveyportalApplication            : No active profile set, falling back to default profiles: default
+2021-04-18 20:08:12.546  INFO 21448 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\P_Moitra\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc8\19.8.0.0\df9cff9b91c47d06b9a0482d566ee2d83a03e586\ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/C:/Users/P_Moitra/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/19.8.0.0/df9cff9b91c47d06b9a0482d566ee2d83a03e586/oraclepki.jar
+2021-04-18 20:08:12.546  INFO 21448 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-18 20:08:12.546  INFO 21448 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-18 20:08:13.275  INFO 21448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-18 20:08:13.377  INFO 21448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 7 JPA repository interfaces.
+2021-04-18 20:08:14.065  INFO 21448 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8070 (http)
+2021-04-18 20:08:14.074  INFO 21448 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-18 20:08:14.074  INFO 21448 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-04-18 20:08:14.159  INFO 21448 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-18 20:08:14.160  INFO 21448 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1613 ms
+2021-04-18 20:08:14.379  INFO 21448 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-18 20:08:14.423  INFO 21448 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-04-18 20:08:14.538  INFO 21448 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-18 20:08:14.639  INFO 21448 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-18 20:08:14.810  INFO 21448 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-18 20:08:14.823  INFO 21448 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-18 20:08:15.555  INFO 21448 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-18 20:08:15.562  INFO 21448 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 20:08:15.575  INFO 21448 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-18 20:08:16.107  WARN 21448 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-18 20:08:16.243  INFO 21448 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-18 20:08:16.316  INFO 21448 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-18 20:08:16.643  INFO 21448 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8070 (http) with context path ''
+2021-04-18 20:08:16.644  INFO 21448 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-18 20:08:16.660  INFO 21448 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-18 20:08:16.683  INFO 21448 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-18 20:08:16.830  INFO 21448 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getfindByIdUsingGET_1
+2021-04-18 20:08:16.831  INFO 21448 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: removeByIdUsingDELETE_1
+2021-04-18 20:08:16.852  INFO 21448 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countRecordsUsingGET_1
+2021-04-18 20:08:16.891  INFO 21448 --- [restartedMain] c.c.s.SurveyportalApplication            : Started SurveyportalApplication in 4.71 seconds (JVM running for 5.126)
+2021-04-18 20:09:01.853  INFO 21448 --- [http-nio-8070-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-18 20:09:01.855  INFO 21448 --- [http-nio-8070-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-18 20:09:01.856  INFO 21448 --- [http-nio-8070-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-18 20:45:09.167 ERROR 21448 --- [http-nio-8070-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
+
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:141) ~[na:na]
+	at com.cg.surveyportal.servicesimpl.ParticipantServiceImpl.update(ParticipantServiceImpl.java:35) ~[main/:na]
+	at com.cg.surveyportal.controllers.ParticipantController.updateParticipant(ParticipantController.java:51) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.44.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.44.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at java.base/java.lang.Thread.run(Thread.java:830) ~[na:na]
+
+2021-04-18 20:47:26.633  INFO 21448 --- [http-nio-8070-exec-9] o.h.c.i.AbstractPersistentCollection     : HHH000496: Detaching an uninitialized collection with queued operations from a session: [com.cg.surveyportal.entities.Participant.feedback#26]
+2021-04-18 20:50:07.657  INFO 21448 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-18 20:50:07.662  INFO 21448 --- [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 20:50:07.665  INFO 21448 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-18 20:50:07.671  INFO 21448 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-18 20:50:07.742  INFO 21448 --- [restartedMain] c.c.s.SurveyportalApplication            : Starting SurveyportalApplication using Java 13.0.2 on Predator with PID 21448 (C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal\bin\main started by P_Moitra in C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal)
+2021-04-18 20:50:07.742  INFO 21448 --- [restartedMain] c.c.s.SurveyportalApplication            : No active profile set, falling back to default profiles: default
+2021-04-18 20:50:07.990  INFO 21448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-18 20:50:08.024  INFO 21448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 7 JPA repository interfaces.
+2021-04-18 20:50:08.113  INFO 21448 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8070 (http)
+2021-04-18 20:50:08.114  INFO 21448 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-18 20:50:08.114  INFO 21448 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-04-18 20:50:08.131  INFO 21448 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-18 20:50:08.131  INFO 21448 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 387 ms
+2021-04-18 20:50:08.163  INFO 21448 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-18 20:50:08.169  INFO 21448 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-04-18 20:50:08.181  INFO 21448 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-04-18 20:50:08.181  INFO 21448 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-18 20:50:08.276  INFO 21448 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-18 20:50:08.277  INFO 21448 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 20:50:08.283  INFO 21448 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-18 20:50:08.462  WARN 21448 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-18 20:50:08.493  INFO 21448 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-18 20:50:08.521  INFO 21448 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-18 20:50:08.560  INFO 21448 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8070 (http) with context path ''
+2021-04-18 20:50:08.561  INFO 21448 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-18 20:50:08.561  INFO 21448 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-18 20:50:08.565  INFO 21448 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-18 20:50:08.606  INFO 21448 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getfindByIdUsingGET_1
+2021-04-18 20:50:08.607  INFO 21448 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: removeByIdUsingDELETE_1
+2021-04-18 20:50:08.620  INFO 21448 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countRecordsUsingGET_1
+2021-04-18 20:50:08.640  INFO 21448 --- [restartedMain] c.c.s.SurveyportalApplication            : Started SurveyportalApplication in 0.923 seconds (JVM running for 2516.875)
+2021-04-18 20:50:08.641  INFO 21448 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-04-18 21:01:35.583  INFO 4020 --- [restartedMain] c.c.s.SurveyportalApplication            : Starting SurveyportalApplication using Java 13.0.2 on Predator with PID 4020 (C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal\bin\main started by P_Moitra in C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal)
+2021-04-18 21:01:35.589  INFO 4020 --- [restartedMain] c.c.s.SurveyportalApplication            : No active profile set, falling back to default profiles: default
+2021-04-18 21:01:35.630  INFO 4020 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\P_Moitra\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc8\19.8.0.0\df9cff9b91c47d06b9a0482d566ee2d83a03e586\ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/C:/Users/P_Moitra/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/19.8.0.0/df9cff9b91c47d06b9a0482d566ee2d83a03e586/oraclepki.jar
+2021-04-18 21:01:35.631  INFO 4020 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-18 21:01:35.631  INFO 4020 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-18 21:01:36.410  INFO 4020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-18 21:01:36.510  INFO 4020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 7 JPA repository interfaces.
+2021-04-18 21:01:37.248  INFO 4020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8070 (http)
+2021-04-18 21:01:37.260  INFO 4020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-18 21:01:37.260  INFO 4020 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-04-18 21:01:37.360  INFO 4020 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-18 21:01:37.360  INFO 4020 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1729 ms
+2021-04-18 21:01:37.602  INFO 4020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-18 21:01:37.652  INFO 4020 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-04-18 21:01:37.777  INFO 4020 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-18 21:01:37.888  INFO 4020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-18 21:01:38.096  INFO 4020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-18 21:01:38.109  INFO 4020 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-18 21:01:38.913  INFO 4020 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-18 21:01:38.919  INFO 4020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:01:38.932  INFO 4020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-18 21:01:39.485  WARN 4020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-18 21:01:39.662  INFO 4020 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-18 21:01:39.825  INFO 4020 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:01:40.425  INFO 4020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8070 (http) with context path ''
+2021-04-18 21:01:40.426  INFO 4020 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-18 21:01:40.468  INFO 4020 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-18 21:01:40.522  INFO 4020 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-18 21:01:40.727  INFO 4020 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getfindByIdUsingGET_1
+2021-04-18 21:01:40.730  INFO 4020 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: removeByIdUsingDELETE_1
+2021-04-18 21:01:40.755  INFO 4020 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countRecordsUsingGET_1
+2021-04-18 21:01:40.805  INFO 4020 --- [restartedMain] c.c.s.SurveyportalApplication            : Started SurveyportalApplication in 5.551 seconds (JVM running for 5.973)
+2021-04-18 21:01:51.562  INFO 4020 --- [http-nio-8070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-18 21:01:51.564  INFO 4020 --- [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-18 21:01:51.566  INFO 4020 --- [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-18 21:01:51.735  WARN 4020 --- [http-nio-8070-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.cg.surveyportal.exceptions.TopicNotFoundException: Topic with id:68 does not exist]
+2021-04-18 21:02:07.434  WARN 4020 --- [http-nio-8070-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.cg.surveyportal.exceptions.SurveyorNotFoundException: Invalid Surveyor Id]
+2021-04-18 21:02:29.943  WARN 4020 --- [http-nio-8070-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.cg.surveyportal.exceptions.TopicNotFoundException: Topic with id:68 does not exist]
+2021-04-18 21:06:14.831  INFO 4020 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:06:14.834  INFO 4020 --- [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:06:14.837  INFO 4020 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-18 21:06:14.843  INFO 4020 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-18 21:06:14.920  INFO 4020 --- [restartedMain] c.c.s.SurveyportalApplication            : Starting SurveyportalApplication using Java 13.0.2 on Predator with PID 4020 (C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal\bin\main started by P_Moitra in C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal)
+2021-04-18 21:06:14.921  INFO 4020 --- [restartedMain] c.c.s.SurveyportalApplication            : No active profile set, falling back to default profiles: default
+2021-04-18 21:06:15.187  INFO 4020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-18 21:06:15.218  INFO 4020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 7 JPA repository interfaces.
+2021-04-18 21:06:15.303  INFO 4020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8070 (http)
+2021-04-18 21:06:15.304  INFO 4020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-18 21:06:15.304  INFO 4020 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-04-18 21:06:15.323  INFO 4020 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-18 21:06:15.323  INFO 4020 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 400 ms
+2021-04-18 21:06:15.363  INFO 4020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-18 21:06:15.368  INFO 4020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-04-18 21:06:15.384  INFO 4020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-04-18 21:06:15.385  INFO 4020 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-18 21:06:15.508  INFO 4020 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-18 21:06:15.508  INFO 4020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:06:15.514  INFO 4020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-18 21:06:15.722  WARN 4020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-18 21:06:15.783  INFO 4020 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-18 21:06:15.812  INFO 4020 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:06:15.852  INFO 4020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8070 (http) with context path ''
+2021-04-18 21:06:15.853  INFO 4020 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-18 21:06:15.854  INFO 4020 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-18 21:06:15.867  INFO 4020 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-18 21:06:15.912  INFO 4020 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getfindByIdUsingGET_1
+2021-04-18 21:06:15.914  INFO 4020 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: removeByIdUsingDELETE_1
+2021-04-18 21:06:15.932  INFO 4020 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countRecordsUsingGET_1
+2021-04-18 21:06:15.957  INFO 4020 --- [restartedMain] c.c.s.SurveyportalApplication            : Started SurveyportalApplication in 1.066 seconds (JVM running for 281.124)
+2021-04-18 21:06:15.960  INFO 4020 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-04-18 21:06:32.620  INFO 4020 --- [http-nio-8070-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-18 21:06:32.622  INFO 4020 --- [http-nio-8070-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-18 21:06:32.624  INFO 4020 --- [http-nio-8070-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-04-18 21:07:22.171  INFO 4020 --- [Thread-22] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:07:22.173  INFO 4020 --- [Thread-22] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:07:22.174  INFO 4020 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2021-04-18 21:07:22.181  INFO 4020 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2021-04-18 21:07:22.292  INFO 4020 --- [restartedMain] c.c.s.SurveyportalApplication            : Starting SurveyportalApplication using Java 13.0.2 on Predator with PID 4020 (C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal\bin\main started by P_Moitra in C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal)
+2021-04-18 21:07:22.293  INFO 4020 --- [restartedMain] c.c.s.SurveyportalApplication            : No active profile set, falling back to default profiles: default
+2021-04-18 21:07:22.639  INFO 4020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-18 21:07:22.671  INFO 4020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 7 JPA repository interfaces.
+2021-04-18 21:07:22.754  INFO 4020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8070 (http)
+2021-04-18 21:07:22.754  INFO 4020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-18 21:07:22.754  INFO 4020 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-04-18 21:07:22.779  INFO 4020 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-18 21:07:22.779  INFO 4020 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 480 ms
+2021-04-18 21:07:22.808  INFO 4020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-18 21:07:22.813  INFO 4020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2021-04-18 21:07:22.825  INFO 4020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2021-04-18 21:07:22.826  INFO 4020 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-18 21:07:22.958  INFO 4020 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-18 21:07:22.958  INFO 4020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:07:22.967  INFO 4020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-18 21:07:23.165  WARN 4020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-18 21:07:23.190  INFO 4020 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-18 21:07:23.213  INFO 4020 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:07:23.254  INFO 4020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8070 (http) with context path ''
+2021-04-18 21:07:23.254  INFO 4020 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-18 21:07:23.255  INFO 4020 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-18 21:07:23.259  INFO 4020 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-18 21:07:23.298  INFO 4020 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getfindByIdUsingGET_1
+2021-04-18 21:07:23.299  INFO 4020 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: removeByIdUsingDELETE_1
+2021-04-18 21:07:23.314  INFO 4020 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countRecordsUsingGET_1
+2021-04-18 21:07:23.335  INFO 4020 --- [restartedMain] c.c.s.SurveyportalApplication            : Started SurveyportalApplication in 1.081 seconds (JVM running for 348.503)
+2021-04-18 21:07:23.337  INFO 4020 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-04-18 21:07:29.724  INFO 4020 --- [http-nio-8070-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-18 21:07:29.726  INFO 4020 --- [http-nio-8070-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-18 21:07:29.728  INFO 4020 --- [http-nio-8070-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-18 21:10:07.951  INFO 4020 --- [Thread-33] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:10:07.952  INFO 4020 --- [Thread-33] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:10:07.952  INFO 4020 --- [Thread-33] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2021-04-18 21:10:07.957  INFO 4020 --- [Thread-33] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2021-04-18 21:10:08.021  INFO 4020 --- [restartedMain] c.c.s.SurveyportalApplication            : Starting SurveyportalApplication using Java 13.0.2 on Predator with PID 4020 (C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal\bin\main started by P_Moitra in C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal)
+2021-04-18 21:10:08.022  INFO 4020 --- [restartedMain] c.c.s.SurveyportalApplication            : No active profile set, falling back to default profiles: default
+2021-04-18 21:10:08.242  INFO 4020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-18 21:10:08.269  INFO 4020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 7 JPA repository interfaces.
+2021-04-18 21:10:08.334  INFO 4020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8070 (http)
+2021-04-18 21:10:08.335  INFO 4020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-18 21:10:08.335  INFO 4020 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-04-18 21:10:08.354  INFO 4020 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-18 21:10:08.354  INFO 4020 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 330 ms
+2021-04-18 21:10:08.378  INFO 4020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-18 21:10:08.386  INFO 4020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2021-04-18 21:10:08.399  INFO 4020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2021-04-18 21:10:08.399  INFO 4020 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-18 21:10:08.487  INFO 4020 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-18 21:10:08.487  INFO 4020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:10:08.494  INFO 4020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-18 21:10:08.635  WARN 4020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-18 21:10:08.657  INFO 4020 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-18 21:10:08.674  INFO 4020 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:10:08.709  INFO 4020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8070 (http) with context path ''
+2021-04-18 21:10:08.710  INFO 4020 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-18 21:10:08.710  INFO 4020 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-18 21:10:08.713  INFO 4020 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-18 21:10:08.737  INFO 4020 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getfindByIdUsingGET_1
+2021-04-18 21:10:08.738  INFO 4020 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: removeByIdUsingDELETE_1
+2021-04-18 21:10:08.750  INFO 4020 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countRecordsUsingGET_1
+2021-04-18 21:10:08.766  INFO 4020 --- [restartedMain] c.c.s.SurveyportalApplication            : Started SurveyportalApplication in 0.77 seconds (JVM running for 513.934)
+2021-04-18 21:10:08.767  INFO 4020 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-04-18 21:10:51.374  INFO 4020 --- [Thread-46] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:10:51.376  INFO 4020 --- [Thread-46] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:10:51.377  INFO 4020 --- [Thread-46] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2021-04-18 21:10:51.382  INFO 4020 --- [Thread-46] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2021-04-18 21:10:51.461  INFO 4020 --- [restartedMain] c.c.s.SurveyportalApplication            : Starting SurveyportalApplication using Java 13.0.2 on Predator with PID 4020 (C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal\bin\main started by P_Moitra in C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal)
+2021-04-18 21:10:51.461  INFO 4020 --- [restartedMain] c.c.s.SurveyportalApplication            : No active profile set, falling back to default profiles: default
+2021-04-18 21:10:51.691  INFO 4020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-18 21:10:51.718  INFO 4020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 7 JPA repository interfaces.
+2021-04-18 21:10:51.788  INFO 4020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8070 (http)
+2021-04-18 21:10:51.789  INFO 4020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-18 21:10:51.789  INFO 4020 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-04-18 21:10:51.816  INFO 4020 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-18 21:10:51.816  INFO 4020 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 352 ms
+2021-04-18 21:10:51.850  INFO 4020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-18 21:10:51.856  INFO 4020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2021-04-18 21:10:51.868  INFO 4020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2021-04-18 21:10:51.868  INFO 4020 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-18 21:10:51.946  INFO 4020 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-18 21:10:51.946  INFO 4020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:10:51.951  INFO 4020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-18 21:10:52.107  WARN 4020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-18 21:10:52.132  INFO 4020 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-18 21:10:52.154  INFO 4020 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:10:52.199  INFO 4020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8070 (http) with context path ''
+2021-04-18 21:10:52.201  INFO 4020 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-18 21:10:52.202  INFO 4020 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-18 21:10:52.207  INFO 4020 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-18 21:10:52.242  INFO 4020 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getfindByIdUsingGET_1
+2021-04-18 21:10:52.243  INFO 4020 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: removeByIdUsingDELETE_1
+2021-04-18 21:10:52.252  INFO 4020 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countRecordsUsingGET_1
+2021-04-18 21:10:52.269  INFO 4020 --- [restartedMain] c.c.s.SurveyportalApplication            : Started SurveyportalApplication in 0.841 seconds (JVM running for 557.437)
+2021-04-18 21:10:52.270  INFO 4020 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-04-18 21:11:07.618  INFO 4020 --- [http-nio-8070-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-18 21:11:07.619  INFO 4020 --- [http-nio-8070-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-18 21:11:07.621  INFO 4020 --- [http-nio-8070-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-04-18 21:18:12.779  INFO 10148 --- [main] com.cg.surveyportal.FeedbackTests        : Starting FeedbackTests using Java 13.0.2 on Predator with PID 10148 (started by P_Moitra in C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal)
+2021-04-18 21:18:12.781  INFO 10148 --- [main] com.cg.surveyportal.FeedbackTests        : No active profile set, falling back to default profiles: default
+2021-04-18 21:18:13.581  INFO 10148 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-18 21:18:13.655  INFO 10148 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 7 JPA repository interfaces.
+2021-04-18 21:18:14.639  INFO 10148 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-18 21:18:14.696  INFO 10148 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-04-18 21:18:14.741  INFO 10148 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-18 21:18:14.989  INFO 10148 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-18 21:18:15.189  INFO 10148 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-18 21:18:15.203  INFO 10148 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-18 21:18:15.839  INFO 10148 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-18 21:18:15.849  INFO 10148 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:18:16.569  WARN 10148 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-18 21:18:16.914  INFO 10148 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-18 21:18:17.218  INFO 10148 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:18:17.554  INFO 10148 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-18 21:18:17.571  INFO 10148 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-18 21:18:17.593  INFO 10148 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-18 21:18:17.741  INFO 10148 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getfindByIdUsingGET_1
+2021-04-18 21:18:17.742  INFO 10148 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: removeByIdUsingDELETE_1
+2021-04-18 21:18:17.762  INFO 10148 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countRecordsUsingGET_1
+2021-04-18 21:18:17.800  INFO 10148 --- [main] com.cg.surveyportal.FeedbackTests        : Started FeedbackTests in 5.27 seconds (JVM running for 6.189)
+2021-04-18 21:18:17.881  INFO 10148 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:18:17.885  INFO 10148 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:18:17.888  INFO 10148 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-18 21:18:17.896  INFO 10148 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-18 21:19:07.744  INFO 22084 --- [main] c.c.s.SurveyorServiceImplTest            : Starting SurveyorServiceImplTest using Java 13.0.2 on Predator with PID 22084 (started by P_Moitra in C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal)
+2021-04-18 21:19:07.746  INFO 22084 --- [main] c.c.s.SurveyorServiceImplTest            : No active profile set, falling back to default profiles: default
+2021-04-18 21:19:08.526  INFO 22084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-18 21:19:08.598  INFO 22084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 7 JPA repository interfaces.
+2021-04-18 21:19:09.559  INFO 22084 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-18 21:19:09.615  INFO 22084 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-04-18 21:19:09.658  INFO 22084 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-18 21:19:09.907  INFO 22084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-18 21:19:10.112  INFO 22084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-18 21:19:10.127  INFO 22084 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-18 21:19:10.753  INFO 22084 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-18 21:19:10.761  INFO 22084 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:19:11.450  WARN 22084 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-18 21:19:11.729  INFO 22084 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-18 21:19:12.000  INFO 22084 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:19:12.351  INFO 22084 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-18 21:19:12.368  INFO 22084 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-18 21:19:12.391  INFO 22084 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-18 21:19:12.537  INFO 22084 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getfindByIdUsingGET_1
+2021-04-18 21:19:12.538  INFO 22084 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: removeByIdUsingDELETE_1
+2021-04-18 21:19:12.557  INFO 22084 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countRecordsUsingGET_1
+2021-04-18 21:19:12.593  INFO 22084 --- [main] c.c.s.SurveyorServiceImplTest            : Started SurveyorServiceImplTest in 5.089 seconds (JVM running for 5.992)
+2021-04-18 21:19:12.803  INFO 22084 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:19:12.807  INFO 22084 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:19:12.809  INFO 22084 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-18 21:19:12.816  INFO 22084 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-18 21:20:00.703  INFO 16280 --- [main] com.cg.surveyportal.TopicServicesTest    : Starting TopicServicesTest using Java 13.0.2 on Predator with PID 16280 (started by P_Moitra in C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal)
+2021-04-18 21:20:00.705  INFO 16280 --- [main] com.cg.surveyportal.TopicServicesTest    : No active profile set, falling back to default profiles: default
+2021-04-18 21:20:01.494  INFO 16280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-18 21:20:01.570  INFO 16280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 7 JPA repository interfaces.
+2021-04-18 21:20:02.533  INFO 16280 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-18 21:20:02.586  INFO 16280 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-04-18 21:20:02.632  INFO 16280 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-18 21:20:02.887  INFO 16280 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-18 21:20:03.082  INFO 16280 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-18 21:20:03.096  INFO 16280 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-18 21:20:03.725  INFO 16280 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-18 21:20:03.732  INFO 16280 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:20:04.429  WARN 16280 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-18 21:20:04.721  INFO 16280 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-18 21:20:04.988  INFO 16280 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:20:05.312  INFO 16280 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-18 21:20:05.330  INFO 16280 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-18 21:20:05.352  INFO 16280 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-18 21:20:05.494  INFO 16280 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getfindByIdUsingGET_1
+2021-04-18 21:20:05.495  INFO 16280 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: removeByIdUsingDELETE_1
+2021-04-18 21:20:05.517  INFO 16280 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countRecordsUsingGET_1
+2021-04-18 21:20:05.555  INFO 16280 --- [main] com.cg.surveyportal.TopicServicesTest    : Started TopicServicesTest in 5.093 seconds (JVM running for 6.001)
+2021-04-18 21:20:05.696  INFO 16280 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:20:05.701  INFO 16280 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:20:05.703  INFO 16280 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-18 21:20:05.711  INFO 16280 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-18 21:20:34.042  INFO 11340 --- [main] com.cg.surveyportal.SurveyTest           : Starting SurveyTest using Java 13.0.2 on Predator with PID 11340 (started by P_Moitra in C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal)
+2021-04-18 21:20:34.044  INFO 11340 --- [main] com.cg.surveyportal.SurveyTest           : No active profile set, falling back to default profiles: default
+2021-04-18 21:20:34.848  INFO 11340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-18 21:20:34.924  INFO 11340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 7 JPA repository interfaces.
+2021-04-18 21:20:35.906  INFO 11340 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-18 21:20:35.962  INFO 11340 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-04-18 21:20:36.007  INFO 11340 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-18 21:20:36.270  INFO 11340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-18 21:20:36.463  INFO 11340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-18 21:20:36.477  INFO 11340 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-18 21:20:37.107  INFO 11340 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-18 21:20:37.116  INFO 11340 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:20:37.812  WARN 11340 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-18 21:20:38.109  INFO 11340 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-18 21:20:38.374  INFO 11340 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:20:38.704  INFO 11340 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-18 21:20:38.723  INFO 11340 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-18 21:20:38.746  INFO 11340 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-18 21:20:38.892  INFO 11340 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getfindByIdUsingGET_1
+2021-04-18 21:20:38.893  INFO 11340 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: removeByIdUsingDELETE_1
+2021-04-18 21:20:38.915  INFO 11340 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countRecordsUsingGET_1
+2021-04-18 21:20:38.953  INFO 11340 --- [main] com.cg.surveyportal.SurveyTest           : Started SurveyTest in 5.153 seconds (JVM running for 6.057)
+2021-04-18 21:20:39.059  INFO 11340 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:20:39.063  INFO 11340 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:20:39.066  INFO 11340 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-18 21:20:39.076  INFO 11340 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-18 21:21:19.046  INFO 20140 --- [main] com.cg.surveyportal.QuestionTests        : Starting QuestionTests using Java 13.0.2 on Predator with PID 20140 (started by P_Moitra in C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal)
+2021-04-18 21:21:19.048  INFO 20140 --- [main] com.cg.surveyportal.QuestionTests        : No active profile set, falling back to default profiles: default
+2021-04-18 21:21:19.838  INFO 20140 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-18 21:21:19.917  INFO 20140 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 7 JPA repository interfaces.
+2021-04-18 21:21:20.922  INFO 20140 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-18 21:21:20.981  INFO 20140 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-04-18 21:21:21.024  INFO 20140 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-18 21:21:21.281  INFO 20140 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-18 21:21:21.480  INFO 20140 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-18 21:21:21.495  INFO 20140 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-18 21:21:22.117  INFO 20140 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-18 21:21:22.124  INFO 20140 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:21:22.801  WARN 20140 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-18 21:21:23.116  INFO 20140 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-18 21:21:23.374  INFO 20140 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:21:23.687  INFO 20140 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-18 21:21:23.704  INFO 20140 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-18 21:21:23.726  INFO 20140 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-18 21:21:23.881  INFO 20140 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getfindByIdUsingGET_1
+2021-04-18 21:21:23.882  INFO 20140 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: removeByIdUsingDELETE_1
+2021-04-18 21:21:23.904  INFO 20140 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countRecordsUsingGET_1
+2021-04-18 21:21:23.941  INFO 20140 --- [main] com.cg.surveyportal.QuestionTests        : Started QuestionTests in 5.137 seconds (JVM running for 6.06)
+2021-04-18 21:21:24.041  INFO 20140 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:21:24.047  INFO 20140 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:21:24.050  INFO 20140 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-18 21:21:24.060  INFO 20140 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-18 21:22:41.462  INFO 21444 --- [main] c.c.s.SurveyorServiceImplTest            : Starting SurveyorServiceImplTest using Java 13.0.2 on Predator with PID 21444 (started by P_Moitra in C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal)
+2021-04-18 21:22:41.463  INFO 21444 --- [main] c.c.s.SurveyorServiceImplTest            : No active profile set, falling back to default profiles: default
+2021-04-18 21:22:42.250  INFO 21444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-18 21:22:42.328  INFO 21444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 7 JPA repository interfaces.
+2021-04-18 21:22:43.321  INFO 21444 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-18 21:22:43.379  INFO 21444 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-04-18 21:22:43.421  INFO 21444 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-18 21:22:43.672  INFO 21444 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-18 21:22:43.879  INFO 21444 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-18 21:22:43.895  INFO 21444 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-18 21:22:44.523  INFO 21444 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-18 21:22:44.531  INFO 21444 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:22:45.213  WARN 21444 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-18 21:22:45.523  INFO 21444 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-18 21:22:45.781  INFO 21444 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:22:46.111  INFO 21444 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-18 21:22:46.135  INFO 21444 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-18 21:22:46.159  INFO 21444 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-18 21:22:46.304  INFO 21444 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getfindByIdUsingGET_1
+2021-04-18 21:22:46.305  INFO 21444 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: removeByIdUsingDELETE_1
+2021-04-18 21:22:46.324  INFO 21444 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countRecordsUsingGET_1
+2021-04-18 21:22:46.361  INFO 21444 --- [main] c.c.s.SurveyorServiceImplTest            : Started SurveyorServiceImplTest in 5.138 seconds (JVM running for 6.049)
+2021-04-18 21:22:46.558  INFO 21444 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:22:46.563  INFO 21444 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:22:46.565  INFO 21444 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-18 21:22:46.573  INFO 21444 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-18 21:23:52.498  INFO 14280 --- [main] com.cg.surveyportal.TopicServicesTest    : Starting TopicServicesTest using Java 13.0.2 on Predator with PID 14280 (started by P_Moitra in C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal)
+2021-04-18 21:23:52.500  INFO 14280 --- [main] com.cg.surveyportal.TopicServicesTest    : No active profile set, falling back to default profiles: default
+2021-04-18 21:23:53.359  INFO 14280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-18 21:23:53.433  INFO 14280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 7 JPA repository interfaces.
+2021-04-18 21:23:54.392  INFO 14280 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-18 21:23:54.445  INFO 14280 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-04-18 21:23:54.493  INFO 14280 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-18 21:23:54.741  INFO 14280 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-18 21:23:54.941  INFO 14280 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-18 21:23:54.956  INFO 14280 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-18 21:23:55.588  INFO 14280 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-18 21:23:55.598  INFO 14280 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:23:56.281  WARN 14280 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-18 21:23:56.590  INFO 14280 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-18 21:23:56.861  INFO 14280 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:23:57.182  INFO 14280 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-18 21:23:57.199  INFO 14280 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-18 21:23:57.221  INFO 14280 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-18 21:23:57.379  INFO 14280 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getfindByIdUsingGET_1
+2021-04-18 21:23:57.381  INFO 14280 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: removeByIdUsingDELETE_1
+2021-04-18 21:23:57.401  INFO 14280 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countRecordsUsingGET_1
+2021-04-18 21:23:57.437  INFO 14280 --- [main] com.cg.surveyportal.TopicServicesTest    : Started TopicServicesTest in 5.176 seconds (JVM running for 6.087)
+2021-04-18 21:23:57.580  INFO 14280 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:23:57.586  INFO 14280 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:23:57.589  INFO 14280 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-18 21:23:57.597  INFO 14280 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-18 21:24:49.976  INFO 6704 --- [main] com.cg.surveyportal.SurveyTest           : Starting SurveyTest using Java 13.0.2 on Predator with PID 6704 (started by P_Moitra in C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal)
+2021-04-18 21:24:49.978  INFO 6704 --- [main] com.cg.surveyportal.SurveyTest           : No active profile set, falling back to default profiles: default
+2021-04-18 21:24:50.761  INFO 6704 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-18 21:24:50.834  INFO 6704 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 7 JPA repository interfaces.
+2021-04-18 21:24:51.832  INFO 6704 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-18 21:24:51.888  INFO 6704 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-04-18 21:24:51.929  INFO 6704 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-18 21:24:52.178  INFO 6704 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-18 21:24:52.361  INFO 6704 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-18 21:24:52.375  INFO 6704 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-18 21:24:52.998  INFO 6704 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-18 21:24:53.008  INFO 6704 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:24:53.689  WARN 6704 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-18 21:24:53.974  INFO 6704 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-18 21:24:54.254  INFO 6704 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:24:54.571  INFO 6704 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-18 21:24:54.588  INFO 6704 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-18 21:24:54.610  INFO 6704 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-18 21:24:54.757  INFO 6704 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getfindByIdUsingGET_1
+2021-04-18 21:24:54.759  INFO 6704 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: removeByIdUsingDELETE_1
+2021-04-18 21:24:54.784  INFO 6704 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countRecordsUsingGET_1
+2021-04-18 21:24:54.821  INFO 6704 --- [main] com.cg.surveyportal.SurveyTest           : Started SurveyTest in 5.079 seconds (JVM running for 5.977)
+2021-04-18 21:24:54.933  INFO 6704 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:24:54.937  INFO 6704 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:24:54.939  INFO 6704 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-18 21:24:54.948  INFO 6704 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-18 21:25:22.226  INFO 16620 --- [main] com.cg.surveyportal.QuestionTests        : Starting QuestionTests using Java 13.0.2 on Predator with PID 16620 (started by P_Moitra in C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal)
+2021-04-18 21:25:22.227  INFO 16620 --- [main] com.cg.surveyportal.QuestionTests        : No active profile set, falling back to default profiles: default
+2021-04-18 21:25:23.042  INFO 16620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-18 21:25:23.121  INFO 16620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 7 JPA repository interfaces.
+2021-04-18 21:25:24.088  INFO 16620 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-18 21:25:24.141  INFO 16620 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-04-18 21:25:24.184  INFO 16620 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-18 21:25:24.444  INFO 16620 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-18 21:25:24.641  INFO 16620 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-18 21:25:24.657  INFO 16620 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-18 21:25:25.303  INFO 16620 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-18 21:25:25.312  INFO 16620 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:25:25.991  WARN 16620 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-18 21:25:26.317  INFO 16620 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-18 21:25:26.575  INFO 16620 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:25:26.891  INFO 16620 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-18 21:25:26.908  INFO 16620 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-18 21:25:26.932  INFO 16620 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-18 21:25:27.080  INFO 16620 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getfindByIdUsingGET_1
+2021-04-18 21:25:27.081  INFO 16620 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: removeByIdUsingDELETE_1
+2021-04-18 21:25:27.109  INFO 16620 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countRecordsUsingGET_1
+2021-04-18 21:25:27.149  INFO 16620 --- [main] com.cg.surveyportal.QuestionTests        : Started QuestionTests in 5.161 seconds (JVM running for 6.09)
+2021-04-18 21:25:27.245  INFO 16620 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:25:27.250  INFO 16620 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:25:27.253  INFO 16620 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-18 21:25:27.261  INFO 16620 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-18 21:25:48.927  INFO 18684 --- [main] com.cg.surveyportal.ParticipantTests     : Starting ParticipantTests using Java 13.0.2 on Predator with PID 18684 (started by P_Moitra in C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal)
+2021-04-18 21:25:48.929  INFO 18684 --- [main] com.cg.surveyportal.ParticipantTests     : No active profile set, falling back to default profiles: default
+2021-04-18 21:25:49.728  INFO 18684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-18 21:25:49.804  INFO 18684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 7 JPA repository interfaces.
+2021-04-18 21:25:50.814  INFO 18684 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-18 21:25:50.869  INFO 18684 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-04-18 21:25:50.914  INFO 18684 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-18 21:25:51.191  INFO 18684 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-18 21:25:51.402  INFO 18684 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-18 21:25:51.416  INFO 18684 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-18 21:25:52.067  INFO 18684 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-18 21:25:52.075  INFO 18684 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:25:52.742  WARN 18684 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-18 21:25:53.048  INFO 18684 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-18 21:25:53.311  INFO 18684 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:25:53.630  INFO 18684 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-18 21:25:53.646  INFO 18684 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-18 21:25:53.667  INFO 18684 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-18 21:25:53.809  INFO 18684 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getfindByIdUsingGET_1
+2021-04-18 21:25:53.810  INFO 18684 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: removeByIdUsingDELETE_1
+2021-04-18 21:25:53.828  INFO 18684 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countRecordsUsingGET_1
+2021-04-18 21:25:53.863  INFO 18684 --- [main] com.cg.surveyportal.ParticipantTests     : Started ParticipantTests in 5.175 seconds (JVM running for 6.091)
+2021-04-18 21:25:53.968  INFO 18684 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:25:53.975  INFO 18684 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:25:53.977  INFO 18684 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-18 21:25:53.987  INFO 18684 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-18 21:26:00.477  INFO 11332 --- [main] com.cg.surveyportal.FeedbackTests        : Starting FeedbackTests using Java 13.0.2 on Predator with PID 11332 (started by P_Moitra in C:\Users\P_Moitra\git\repository\surveyportal\com-cg-surveyportal)
+2021-04-18 21:26:00.479  INFO 11332 --- [main] com.cg.surveyportal.FeedbackTests        : No active profile set, falling back to default profiles: default
+2021-04-18 21:26:01.344  INFO 11332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-18 21:26:01.422  INFO 11332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 7 JPA repository interfaces.
+2021-04-18 21:26:02.456  INFO 11332 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-18 21:26:02.512  INFO 11332 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-04-18 21:26:02.557  INFO 11332 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-18 21:26:02.817  INFO 11332 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-18 21:26:03.021  INFO 11332 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-18 21:26:03.039  INFO 11332 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-18 21:26:03.695  INFO 11332 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-18 21:26:03.704  INFO 11332 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:26:04.470  WARN 11332 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-18 21:26:04.789  INFO 11332 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-18 21:26:05.094  INFO 11332 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:26:05.430  INFO 11332 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-18 21:26:05.448  INFO 11332 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-18 21:26:05.474  INFO 11332 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-18 21:26:05.625  INFO 11332 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getfindByIdUsingGET_1
+2021-04-18 21:26:05.627  INFO 11332 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: removeByIdUsingDELETE_1
+2021-04-18 21:26:05.649  INFO 11332 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countRecordsUsingGET_1
+2021-04-18 21:26:05.686  INFO 11332 --- [main] com.cg.surveyportal.FeedbackTests        : Started FeedbackTests in 5.45 seconds (JVM running for 6.386)
+2021-04-18 21:26:05.785  INFO 11332 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-18 21:26:05.789  INFO 11332 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 21:26:05.792  INFO 11332 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-18 21:26:05.800  INFO 11332 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

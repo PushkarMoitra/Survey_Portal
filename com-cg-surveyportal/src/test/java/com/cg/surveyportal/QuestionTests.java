@@ -2,7 +2,6 @@ package com.cg.surveyportal;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;
@@ -18,9 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import com.cg.surveyportal.entities.Question;
-import com.cg.surveyportal.exceptions.InvalidParticipantException;
 import com.cg.surveyportal.exceptions.InvalidQuestionTextException;
-import com.cg.surveyportal.exceptions.ParticipantNotFoundException;
 import com.cg.surveyportal.exceptions.QuestionNotFoundException;
 import com.cg.surveyportal.repositories.IQuestionRepository;
 import com.cg.surveyportal.services.IQuestionService;

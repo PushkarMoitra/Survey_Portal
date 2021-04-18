@@ -153,9 +153,10 @@ public class TopicServiceImpl implements ITopicService {
 		topicRepository.saveAll(topicList);
 	}
 	@Override
-	public Topic changeSurveyor(long topicId, long SurveyorId) throws TopicNotFoundException, SurveyorNotFoundException {
-		Topic topic = Optional.of(topicRepository.findById(topicId).get()).orElseThrow(()-> new TopicNotFoundException("Topic with id:"+topicId+" does not exist"));
-		Surveyor surveyor = Optional.of(surveyorService.getById(SurveyorId)).orElseThrow(()-> new SurveyorNotFoundException("Surveyor with id:"+SurveyorId+" does not exist"));
+	public Topic changeSurveyor(long topicId, long surveyorId) throws TopicNotFoundException, SurveyorNotFoundException {
+		//Topic topic = Optional.of(topicRepository.findById(topicId).get()).orElseThrow(()-> new TopicNotFoundException("Topic with id:"+topicId+" does not exist"));
+		Topic topic = this.getTopicDetails(topicId);
+		Surveyor surveyor = Optional.of(surveyorService.getById(surveyorId)).orElseThrow(()-> new SurveyorNotFoundException("Surveyor with id:"+surveyorId+" does not exist"));
 		topic.setSurveyor(surveyor);
 		topicRepository.save(topic);
 		return topic;

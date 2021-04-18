@@ -4,8 +4,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -17,13 +15,9 @@ import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.context.junit4.SpringRunner;
-
-import com.cg.surveyportal.entities.Participant;
 import com.cg.surveyportal.entities.Survey;
 import com.cg.surveyportal.entities.Surveyor;
 import com.cg.surveyportal.exceptions.InvalidSurveyorException;
-import com.cg.surveyportal.exceptions.ParticipantNotFoundException;
 import com.cg.surveyportal.exceptions.SurveyorNotFoundException;
 import com.cg.surveyportal.repositories.ISurveyorRepository;
 import com.cg.surveyportal.services.ISurveyorService;
@@ -43,7 +37,6 @@ class SurveyorServiceImplTest {
 	
 	Surveyor sv;
 	Survey s;
-	
 	
 	@BeforeEach
 	public void init() {

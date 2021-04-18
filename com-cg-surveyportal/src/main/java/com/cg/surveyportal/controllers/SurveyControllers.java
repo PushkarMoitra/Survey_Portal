@@ -56,7 +56,7 @@ public class SurveyControllers {
 	}
 	
 	//Deactivating a survey
-	@GetMapping("/close/{surveyId}")
+	@PutMapping("/close/{surveyId}")
 	private void closeSurvey(@PathVariable("surveyId") Long surveyId) throws SurveyNotFoundException {
 		surveyService.closeSurvey(surveyId);
 	}

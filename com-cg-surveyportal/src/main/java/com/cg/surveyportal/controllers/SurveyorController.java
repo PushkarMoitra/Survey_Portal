@@ -26,11 +26,11 @@ public class SurveyorController {
 	@Autowired
 	ISurveyorService surveyorService;
 	
-	@GetMapping("/populate")
-	private void populate()
-	{
-		surveyorService.populateSurveyor();
-	}
+//	@GetMapping("/populate")
+//	private void populate()
+//	{
+//		surveyorService.populateSurveyor();
+//	}
 	
 	@GetMapping("/count")
 	public ResponseEntity<Long> countRecords()
