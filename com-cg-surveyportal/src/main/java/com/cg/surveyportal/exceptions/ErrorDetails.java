@@ -1,5 +1,7 @@
 package com.cg.surveyportal.exceptions;
-
+/*
+ * This class will store and send appropriate message for any exception thrown by GolbalExceptionHandler.
+ */
 public class ErrorDetails {
 
 	private String message;

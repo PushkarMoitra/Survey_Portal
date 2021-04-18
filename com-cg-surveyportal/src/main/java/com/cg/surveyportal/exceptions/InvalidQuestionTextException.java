@@ -2,7 +2,10 @@ package com.cg.surveyportal.exceptions;
 
 public class InvalidQuestionTextException extends Exception{
 
-    public InvalidQuestionTextException(){
+    
+	private static final long serialVersionUID = 1L;
+
+	public InvalidQuestionTextException(){
 
     }
 

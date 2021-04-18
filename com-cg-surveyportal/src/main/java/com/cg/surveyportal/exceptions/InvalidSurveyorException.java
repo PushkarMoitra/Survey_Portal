@@ -2,7 +2,10 @@ package com.cg.surveyportal.exceptions;
 
 public class InvalidSurveyorException extends Exception{
 
-    public InvalidSurveyorException(){
+    
+	private static final long serialVersionUID = 1L;
+
+	public InvalidSurveyorException(){
 
     }
 

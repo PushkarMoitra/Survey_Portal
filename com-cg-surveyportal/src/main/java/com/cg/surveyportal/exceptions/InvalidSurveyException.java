@@ -1,7 +1,10 @@
 package com.cg.surveyportal.exceptions;
 
 public class InvalidSurveyException extends Exception{
-    public InvalidSurveyException(){
+   
+	private static final long serialVersionUID = 1L;
+
+	public InvalidSurveyException(){
 
     }
 

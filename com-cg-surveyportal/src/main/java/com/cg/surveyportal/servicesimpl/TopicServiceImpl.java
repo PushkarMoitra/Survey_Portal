@@ -4,10 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.cg.surveyportal.entities.Survey;
 import com.cg.surveyportal.entities.Surveyor;
 import com.cg.surveyportal.entities.Topic;
@@ -18,6 +16,9 @@ import com.cg.surveyportal.repositories.ITopicRepository;
 import com.cg.surveyportal.services.ISurveyorService;
 import com.cg.surveyportal.services.ITopicService;
 
+/**
+ * Implementation class for ITopicService which contains business logics.
+ */
 @Service
 public class TopicServiceImpl implements ITopicService {
 

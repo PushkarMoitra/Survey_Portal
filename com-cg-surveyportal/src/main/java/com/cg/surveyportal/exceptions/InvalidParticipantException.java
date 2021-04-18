@@ -2,7 +2,10 @@ package com.cg.surveyportal.exceptions;
 
 public class InvalidParticipantException extends Exception{
 
-    public InvalidParticipantException(){
+    
+	private static final long serialVersionUID = 1L;
+
+	public InvalidParticipantException(){
 
     }
 

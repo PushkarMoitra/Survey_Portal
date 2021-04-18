@@ -5,7 +5,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
-
+/**
+ * This class will handle all the exceptions occurred in this application.
+ */
 @ControllerAdvice
 public class GlobalExceptionHandler {
 	private String TOPIC_NOT_FOUND = "TOPIC_NOT_FOUND";

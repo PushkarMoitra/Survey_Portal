@@ -1,7 +1,10 @@
 package com.cg.surveyportal.exceptions;
 
 public class QuestionNotFoundException extends Exception{
-    public QuestionNotFoundException(){
+   
+	private static final long serialVersionUID = 1L;
+
+	public QuestionNotFoundException(){
 
     }
 

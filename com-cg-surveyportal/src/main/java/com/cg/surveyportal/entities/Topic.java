@@ -1,7 +1,6 @@
 package com.cg.surveyportal.entities;
 
 import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -11,9 +10,10 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-
+/*
+ * This will create a table in the database in below mentioned format.
+ */
 @Entity
 @Table
 public class Topic {
@@ -34,6 +34,13 @@ public class Topic {
 	//Constructors
 	public Topic() {
 	}
+	/**
+	 * @param id : Topic ID
+	 * @param name : Name of the topic
+	 * @param description : Description of the topic
+	 * @param surveys : Survey on that topic
+	 * @param surveyor : Surveyor who created the survey
+	 */
 	public Topic(Long id, String name, String description, List<Survey> surveys, Surveyor surveyor) {
 		super();
 		this.id = id;
