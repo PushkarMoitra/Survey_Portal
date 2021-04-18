@@ -46,12 +46,12 @@ public class ParticipantController
 	private ResponseEntity<String> registerParticipant(@PathVariable("userName") String userName, @PathVariable("password") String password) throws InvalidParticipantException{
 		return new ResponseEntity<>(participantserviceimpl.register(userName, password),HttpStatus.ACCEPTED);
 	}
-	@PutMapping("/add/{id}/{firstName}/{lastName}/{userName}")
+	@PutMapping("/update/{id}/{firstName}/{lastName}/{userName}")
 	private ResponseEntity <String> updateParticipant(@PathVariable("id") Long id, @PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName, @PathVariable("userName") String userName) throws InvalidParticipantException, ParticipantNotFoundException{
 		return new ResponseEntity<>(participantserviceimpl.update(id,firstName, lastName, userName),HttpStatus.OK);
 	}
 	
-	@PostMapping("/update/{firstName}/{lastName}/{userName}")
+	@PostMapping("/add/{firstName}/{lastName}/{userName}")
 	private ResponseEntity <String> addParticipant(@PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName, @PathVariable("userName") String userName) throws InvalidParticipantException, ParticipantNotFoundException{
 		return new ResponseEntity<>(participantserviceimpl.add(firstName, lastName, userName),HttpStatus.OK);
 	}

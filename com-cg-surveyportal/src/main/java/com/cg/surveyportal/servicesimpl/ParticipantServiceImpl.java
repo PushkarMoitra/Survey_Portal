@@ -10,6 +10,7 @@ import com.cg.surveyportal.entities.Participant;
 import com.cg.surveyportal.exceptions.InvalidParticipantException;
 import com.cg.surveyportal.exceptions.ParticipantNotFoundException;
 import com.cg.surveyportal.repositories.IParticipantRepository;
+import com.cg.surveyportal.repositoriesimpl.ParticipantRepositoryImpl;
 import com.cg.surveyportal.services.IParticipantService;
 import com.cg.surveyportal.services.IRegisterOrLogInService;
 
@@ -36,7 +37,7 @@ public class ParticipantServiceImpl  implements IParticipantService
 		 participant.setFirstName(firstName);
 		 participant.setLastName(lastName);
 		 participant.setUsername(userName);
-		iparticipantrepository.save(participant);
+		 iparticipantrepository.save(participant);
 		 return "Data Update Succesfully";
 	}
 	@Override
@@ -65,6 +66,7 @@ public class ParticipantServiceImpl  implements IParticipantService
 		participant.setFirstName(firstName);
 		participant.setLastName(lastName);
 		participant.setUsername(userName);
+		iparticipantrepository.save(participant);
 		return "Data added Succesfully";
 	}
 }
