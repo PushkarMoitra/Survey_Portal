@@ -10,7 +10,6 @@ import com.cg.surveyportal.entities.Participant;
 import com.cg.surveyportal.exceptions.InvalidParticipantException;
 import com.cg.surveyportal.exceptions.ParticipantNotFoundException;
 import com.cg.surveyportal.repositories.IParticipantRepository;
-import com.cg.surveyportal.repositoriesimpl.ParticipantRepositoryImpl;
 import com.cg.surveyportal.services.IParticipantService;
 import com.cg.surveyportal.services.IRegisterOrLogInService;
 

@@ -5,6 +5,7 @@ import java.util.List;
 import com.cg.surveyportal.entities.Survey;
 import com.cg.surveyportal.entities.Topic;
 import com.cg.surveyportal.exceptions.InvalidSurveyorException;
+import com.cg.surveyportal.exceptions.InvalidTopicNameException;
 import com.cg.surveyportal.exceptions.SurveyorNotFoundException;
 import com.cg.surveyportal.exceptions.TopicNotFoundException;
 
@@ -47,8 +48,9 @@ public interface ITopicService {
      * @return the details of the newly created topic.
      * @throws SurveyorNotFoundException : If the surveyor is not found.
      * @throws InvalidSurveyorException : If the surveyor is invalid.
+     * @throws TopicNotFoundException 
      */
-    public Topic addTopic(String name, String description, String surveyorUsername) throws SurveyorNotFoundException, InvalidSurveyorException;
+    public Topic addTopic(String name, String description, String surveyorUsername) throws SurveyorNotFoundException, InvalidSurveyorException, InvalidTopicNameException, TopicNotFoundException;
     /**
      * Update the name of the topic.
      * 
@@ -56,8 +58,9 @@ public interface ITopicService {
      * @param name : New topic name
      * @return the details of the of the topic with new name.
      * @throws TopicNotFoundException : If the topic is not found.
+     * @throws InvalidTopicNameException 
      */
-    public Topic updateTopicName(long id, String name) throws TopicNotFoundException;
+    public Topic updateTopicName(long id, String name) throws TopicNotFoundException, InvalidTopicNameException;
     /**
      * Update the description of the topic.
      * 

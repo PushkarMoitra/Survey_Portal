@@ -10,6 +10,7 @@ import com.cg.surveyportal.entities.Survey;
 import com.cg.surveyportal.entities.Surveyor;
 import com.cg.surveyportal.entities.Topic;
 import com.cg.surveyportal.exceptions.InvalidSurveyorException;
+import com.cg.surveyportal.exceptions.InvalidTopicNameException;
 import com.cg.surveyportal.exceptions.SurveyorNotFoundException;
 import com.cg.surveyportal.exceptions.TopicNotFoundException;
 import com.cg.surveyportal.repositories.ITopicRepository;
@@ -17,7 +18,7 @@ import com.cg.surveyportal.services.ISurveyorService;
 import com.cg.surveyportal.services.ITopicService;
 
 /**
- * Implementation class for ITopicService which contains business logics.
+ * Implementation class for ITopicService which contains our business logics.
  */
 @Service
 public class TopicServiceImpl implements ITopicService {
@@ -34,8 +35,10 @@ public class TopicServiceImpl implements ITopicService {
 
 	@Override
 	public List<Topic> getTopicsDetails(String name) throws TopicNotFoundException {
-		List<Topic> listName = Optional.of(topicRepository.findByName(name)).orElseThrow(()-> new TopicNotFoundException("Topic with name \""+name+"\" does not exist"));
-		return listName;
+		List<Topic> listTopicByName = topicRepository.findByName(name);
+		if(listTopicByName.isEmpty())
+			throw new TopicNotFoundException("Topic with name "+name+" does not exist");
+		return listTopicByName;
 	}
 	@Override
 	public List<Topic> getAllTopic() {
@@ -62,7 +65,10 @@ public class TopicServiceImpl implements ITopicService {
 	}
 
 	@Override
-	public Topic addTopic(String name, String description, String surveyorUsername) throws SurveyorNotFoundException, InvalidSurveyorException{
+	public Topic addTopic(String name, String description, String surveyorUsername) throws SurveyorNotFoundException, InvalidSurveyorException, InvalidTopicNameException, TopicNotFoundException{
+		List<Topic> listTopicByName = topicRepository.findByName(name);
+		if(listTopicByName.size() > 0)
+			throw new InvalidTopicNameException("Topic with name "+name+" already exist");
 		Topic newTopic = new Topic();
 		newTopic.setId(101L);
 		newTopic.setName(name);
@@ -75,7 +81,10 @@ public class TopicServiceImpl implements ITopicService {
 	}
 
 	@Override
-	public Topic updateTopicName(long id, String name) throws TopicNotFoundException {
+	public Topic updateTopicName(long id, String name) throws TopicNotFoundException, InvalidTopicNameException {
+		List<Topic> listTopicByName = topicRepository.findByName(name);
+		if(listTopicByName.size() > 0)
+			throw new InvalidTopicNameException("Topic with name "+name+" already exist");
 		Topic updateTopic = this.getTopicDetails(id);
 		updateTopic.setName(name);
 		topicRepository.save(updateTopic);
