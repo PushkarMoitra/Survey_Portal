@@ -19,9 +19,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 
 import com.cg.surveyportal.entities.Surveyor;
 import com.cg.surveyportal.entities.Topic;
-import com.cg.surveyportal.exceptions.InvalidSurveyorException;
 import com.cg.surveyportal.exceptions.InvalidTopicNameException;
-import com.cg.surveyportal.exceptions.SurveyorNotFoundException;
 import com.cg.surveyportal.exceptions.TopicNotFoundException;
 import com.cg.surveyportal.repositories.ITopicRepository;
 import com.cg.surveyportal.services.ITopicService;
@@ -68,21 +66,6 @@ public class TopicServicesTest {
 	public void testGetTopicsDetailsNegative() throws TopicNotFoundException, InvalidTopicNameException{
 		Mockito.when(topicRepository.findByName("Lifestyle")).thenReturn(Stream.of(topic).collect(Collectors.toList()));
 		assertNotEquals(0,topicService.getTopicsDetails("Lifestyle").size());
-	}
-	//@Test
-	@DisplayName("Positive testcase for adding a topic")
-	public void testAddTopic() throws SurveyorNotFoundException, InvalidSurveyorException, TopicNotFoundException, InvalidTopicNameException {
-		Mockito.when(topicRepository.save(topic)).thenReturn(topic);
-		assertEquals(topic.toString(), topicService.addTopic("Lifestyle", "Surveys on daily life of us.", null).toString());
-	}
-	//@Test
-	@DisplayName("Negative testcase for adding a topic")
-	public void testAddTopicNegagtive() throws SurveyorNotFoundException, InvalidSurveyorException, TopicNotFoundException, InvalidTopicNameException {
-		Topic anotherTopic = new Topic();
-		topic.setName("Citylife");
-		topic.setDescription("Surveys on daily city life activities.");
-		Mockito.when(topicRepository.save(anotherTopic)).thenReturn(anotherTopic);
-		assertNotEquals(anotherTopic.toString(), topicService.addTopic("Lifestyle", "Surveys on daily life of us.", null).toString());
 	}
 	@Test
 	@DisplayName("Positive testcase for getting all topic")
