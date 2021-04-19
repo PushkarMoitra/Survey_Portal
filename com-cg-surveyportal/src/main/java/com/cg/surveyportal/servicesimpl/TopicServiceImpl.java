@@ -1,6 +1,5 @@
 package com.cg.surveyportal.servicesimpl;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -105,9 +104,6 @@ public class TopicServiceImpl implements ITopicService {
 	}
 	@Override
 	public List<Topic> getTopicsWithNoSurveys() {
-		List<Topic> allTopics = this.getAllTopic();
-		List<Topic> topicsWithNoSurveys = new ArrayList<>();
-		topicsWithNoSurveys = allTopics.stream().filter(topic -> topic.getSurveys().isEmpty()).collect(Collectors.toList());
-		return topicsWithNoSurveys;
+		return this.getAllTopic().stream().filter(topic -> topic.getSurveys().isEmpty()).collect(Collectors.toList());
 	}
 }
