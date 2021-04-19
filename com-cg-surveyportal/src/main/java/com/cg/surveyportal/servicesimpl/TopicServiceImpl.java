@@ -65,7 +65,6 @@ public class TopicServiceImpl implements ITopicService {
 		if(listTopicByName.size() > 0)
 			throw new InvalidTopicNameException("Topic with name "+name+" already exist");
 		Topic newTopic = new Topic();
-		newTopic.setId(101L);
 		newTopic.setName(name);
 		newTopic.setDescription(description);
 		newTopic.setSurveyor(surveyorService.getByUsername(surveyorUsername));
