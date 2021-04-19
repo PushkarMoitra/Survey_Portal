@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cg.surveyportal.entities.Survey;
 import com.cg.surveyportal.exceptions.InvalidSurveyException;
 import com.cg.surveyportal.exceptions.SurveyNotFoundException;
+import com.cg.surveyportal.exceptions.TopicNotFoundException;
 import com.cg.surveyportal.services.ISurveyService;
 
 @RestController
@@ -64,7 +65,7 @@ public class SurveyControllers {
 	
 	//creating post mapping that post the Survey detail in the database
 	@PostMapping("/add")
-	public Survey add(@RequestBody Survey survey) throws InvalidSurveyException {
+	public Survey add(@RequestBody Survey survey) throws InvalidSurveyException, TopicNotFoundException {
 		surveyService.add(survey);
 		return survey;
 	}

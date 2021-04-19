@@ -57,6 +57,7 @@ public class TopicServiceImpl implements ITopicService {
 	public void addSurveysToTopic(Survey survey, String topicName) throws TopicNotFoundException {
 		Topic addSurveyTo = Optional.of(topicRepository.findByName(topicName).get(0)).orElseThrow(()-> new TopicNotFoundException("Topic with name \""+topicName+"\" does not exist"));
 		addSurveyTo.getSurveys().add(survey);
+		topicRepository.save(addSurveyTo);
 	}
 	@Override
 	public Topic addTopic(String name, String description, String surveyorUsername) throws SurveyorNotFoundException, InvalidSurveyorException, InvalidTopicNameException, TopicNotFoundException{
