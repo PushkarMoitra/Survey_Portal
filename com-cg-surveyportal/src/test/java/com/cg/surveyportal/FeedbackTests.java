@@ -38,7 +38,6 @@ import com.cg.surveyportal.services.IFeedbackService;
  			p.setParticipant(null); 
  			p.setQuestion(null); 
  			p.setChosenOption(null);
-// 			p.setFeedback(null); 
  		} 
  		@Test 
  		@DisplayName ("Positive Test case for getting Feedback by ID") 

@@ -68,7 +68,7 @@ public class SurveyorController {
 //		return new ResponseEntity<>(surveyorService.removeAllRecords(),HttpStatus.OK);
 //	}
 	
-	@PutMapping("update")
+	@PutMapping("/update")
 	public ResponseEntity<String> updateRecord(@RequestBody Surveyor surveyor) throws InvalidSurveyorException, SurveyorNotFoundException
 	{
 		return new ResponseEntity<>(surveyorService.update(surveyor),HttpStatus.OK);
