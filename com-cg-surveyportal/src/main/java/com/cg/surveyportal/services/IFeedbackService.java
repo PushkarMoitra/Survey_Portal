@@ -11,7 +11,6 @@ import com.cg.surveyportal.exceptions.SurveyNotFoundException;
 
 public interface IFeedbackService {
 	
-	//public void populateFeedback() throws ParticipantNotFoundException, SurveyNotFoundException;
 	public List<Feedback> getAll();
 	public Feedback getById(long id) throws FeedbackNotFoundException;
 	public Feedback removeById(Long feedbackId);

@@ -30,19 +30,13 @@ public class TopicController {
 	@Autowired
 	private ITopicService topicService;
 	
-//	@GetMapping("/populate")
-//	private void populate()
-//	{
-//		topicService.populateTopic();
-//	}
-	
 	/**
 	 * Show all the topics presents.
 	 * 
 	 * @return a list of all topics with an OK http status.
 	 */
 	@GetMapping("/alltopics")
-	private ResponseEntity<List<Topic>> getAllTopics() 
+	public ResponseEntity<List<Topic>> getAllTopics() 
 	{
 		return new ResponseEntity<List<Topic>>(topicService.getAllTopic(), HttpStatus.OK);
 	}
@@ -55,7 +49,7 @@ public class TopicController {
 	 * @throws TopicNotFoundException : If the topic is not found.
 	 */
 	@GetMapping("/topicbyid/{id}")
-	private ResponseEntity<Topic> getTopicDetails(@PathVariable("id") long id) throws TopicNotFoundException
+	public ResponseEntity<Topic> getTopicDetails(@PathVariable("id") long id) throws TopicNotFoundException
 	{
 		return new ResponseEntity<Topic>(topicService.getTopicDetails(id), HttpStatus.FOUND);
 	}
@@ -66,10 +60,10 @@ public class TopicController {
 	 * @param name : Name of the topic
 	 * @return the topic details of a topic by name with a FOUND http status.
 	 * @throws TopicNotFoundException : If the topic is not found.
-	 * @throws InvalidTopicNameException 
+	 * @throws InvalidTopicNameException : If the name of the topic is invalid.
 	 */
 	@GetMapping("/topicbyname/{name}")
-	private ResponseEntity<List<Topic>> getTopicsDetails(@PathVariable("name") String name) throws TopicNotFoundException, InvalidTopicNameException
+	public ResponseEntity<List<Topic>> getTopicsDetails(@PathVariable("name") String name) throws TopicNotFoundException, InvalidTopicNameException
 	{
 		//return topicService.getTopicsDetails(name);
 		return new ResponseEntity<List<Topic>>(topicService.getTopicsDetails(name), HttpStatus.FOUND);
@@ -81,7 +75,7 @@ public class TopicController {
 	 * @return number of topics present as a Long with an OK http status.
 	 */
 	@GetMapping("/topiccount")
-	private ResponseEntity<Long> getTopicCount()
+	public ResponseEntity<Long> getTopicCount()
 	{
 		return new ResponseEntity<Long>(topicService.getTopicCount(), HttpStatus.OK);
 	}
@@ -92,10 +86,10 @@ public class TopicController {
 	 * @param name : Name of the topic
 	 * @return the number of survey on a topic as long with an OK http status.
 	 * @throws TopicNotFoundException : If the topic is not found.
-	 * @throws InvalidTopicNameException 
+	 * @throws InvalidTopicNameException : If the name of the topic is invalid.
 	 */
 	@GetMapping("/surveycountontopic/{name}")
-	private ResponseEntity<Long> getSurveyDoneOnTopic(@PathVariable("name") String name) throws TopicNotFoundException, InvalidTopicNameException
+	public ResponseEntity<Long> getSurveyDoneOnTopic(@PathVariable("name") String name) throws TopicNotFoundException, InvalidTopicNameException
 	{
 		return new ResponseEntity<Long>(topicService.getSurveyCountOnTopic(name), HttpStatus.OK);
 	}
@@ -106,7 +100,7 @@ public class TopicController {
 	 * @return a list of topics with no surveys done on them with a FOUND http status.
 	 */
 	@GetMapping("/topicwithnosurvey")
-	private ResponseEntity<List<Topic>> getTopicsWithNoSurveys() 
+	public ResponseEntity<List<Topic>> getTopicsWithNoSurveys() 
 	{
 		return new ResponseEntity<List<Topic>>(topicService.getTopicsWithNoSurveys(), HttpStatus.FOUND);
 	}
@@ -120,11 +114,11 @@ public class TopicController {
 	 * @return the details of the newly created topic.
 	 * @throws SurveyorNotFoundException : If the surveyor is not found.
 	 * @throws InvalidSurveyorException : If the surveyor is invalid.
-	 * @throws TopicNotFoundException 
-	 * @throws InvalidTopicNameException 
+	 * @throws TopicNotFoundException : If the topic is not found.
+	 * @throws InvalidTopicNameException : If the name of the topic is invalid. 
 	 */
 	@PostMapping("/addtopic/{name}/{description}/{surveyorUsername}")
-	private ResponseEntity<Topic> addNewTopic(@PathVariable("name") String name, @PathVariable("description") String description, @PathVariable("surveyorUsername") String surveyorUsername ) throws SurveyorNotFoundException, InvalidSurveyorException, TopicNotFoundException, InvalidTopicNameException
+	public ResponseEntity<Topic> addNewTopic(@PathVariable("name") String name, @PathVariable("description") String description, @PathVariable("surveyorUsername") String surveyorUsername ) throws SurveyorNotFoundException, InvalidSurveyorException, TopicNotFoundException, InvalidTopicNameException
 	{
 		return new ResponseEntity<Topic>(topicService.addTopic(name, description, surveyorUsername), HttpStatus.CREATED);
 	}
@@ -136,10 +130,10 @@ public class TopicController {
      * @param name : New topic name
      * @return the details of the of the topic with new name.
      * @throws TopicNotFoundException : If the topic is not found.
-	 * @throws InvalidTopicNameException 
+	 * @throws InvalidTopicNameException : If the name of the topic is invalid. 
 	 */
 	@PutMapping("/modify/name/{id}/{name}")
-	private ResponseEntity<Topic> modifyTopicName(@PathVariable("id") long id, @PathVariable("name") String name) throws TopicNotFoundException, InvalidTopicNameException
+	public ResponseEntity<Topic> modifyTopicName(@PathVariable("id") long id, @PathVariable("name") String name) throws TopicNotFoundException, InvalidTopicNameException
 	{
 		return new ResponseEntity<Topic>(topicService.updateTopicName(id, name), HttpStatus.OK);
 	}
@@ -153,7 +147,7 @@ public class TopicController {
      * @throws TopicNotFoundException : If the topic is not found.
      */
 	@PutMapping("/modify/description/{id}/{description}")
-	private ResponseEntity<Topic> modifyTopicDescription(@PathVariable("id") long id, @PathVariable("description") String description) throws TopicNotFoundException
+	public ResponseEntity<Topic> modifyTopicDescription(@PathVariable("id") long id, @PathVariable("description") String description) throws TopicNotFoundException
 	{
 		return new ResponseEntity<Topic>(topicService.updateTopicDescription(id, description), HttpStatus.OK);
 	}
@@ -168,7 +162,7 @@ public class TopicController {
 	 * @throws SurveyorNotFoundException : If the surveyor is not found
 	 */
 	@PutMapping("/modify/surveyor/{id}/{surveyorid}")
-	private ResponseEntity<Topic> modifyTopicSurveyor(@PathVariable("id") long id, @PathVariable("surveyorid") long surveyorid) throws TopicNotFoundException, SurveyorNotFoundException
+	public ResponseEntity<Topic> modifyTopicSurveyor(@PathVariable("id") long id, @PathVariable("surveyorid") long surveyorid) throws TopicNotFoundException, SurveyorNotFoundException
 	{
 		return new ResponseEntity<Topic>(topicService.changeSurveyor(id, surveyorid), HttpStatus.OK);
 	}
@@ -181,7 +175,7 @@ public class TopicController {
      * @throws TopicNotFoundException : If the topic is not found.
      */
 	@DeleteMapping("/removetopic/{id}")
-	private ResponseEntity<Topic> removeTopic(@PathVariable("id") long id) throws TopicNotFoundException
+	public ResponseEntity<Topic> removeTopic(@PathVariable("id") long id) throws TopicNotFoundException
 	{
 		return new ResponseEntity<Topic>(topicService.removeTopic(id), HttpStatus.OK);
 	}

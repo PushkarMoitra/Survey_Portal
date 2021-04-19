@@ -48,7 +48,7 @@ public interface ITopicService {
      * @return the details of the newly created topic.
      * @throws SurveyorNotFoundException : If the surveyor is not found.
      * @throws InvalidSurveyorException : If the surveyor is invalid.
-     * @throws TopicNotFoundException 
+     * @throws TopicNotFoundException : If the topic is not found.
      */
     public Topic addTopic(String name, String description, String surveyorUsername) throws SurveyorNotFoundException, InvalidSurveyorException, InvalidTopicNameException, TopicNotFoundException;
     /**
@@ -58,7 +58,7 @@ public interface ITopicService {
      * @param name : New topic name
      * @return the details of the of the topic with new name.
      * @throws TopicNotFoundException : If the topic is not found.
-     * @throws InvalidTopicNameException 
+     * @throws InvalidTopicNameException: If the topic name is invalid.
      */
     public Topic updateTopicName(long id, String name) throws TopicNotFoundException, InvalidTopicNameException;
     /**
@@ -71,7 +71,7 @@ public interface ITopicService {
      */
     public Topic updateTopicDescription(long id, String description) throws TopicNotFoundException;
     
-    public void populateTopic() throws InvalidSurveyorException;
+    //public void populateTopic() throws InvalidSurveyorException;
     /**
      * Get details of all the topics.
      * 

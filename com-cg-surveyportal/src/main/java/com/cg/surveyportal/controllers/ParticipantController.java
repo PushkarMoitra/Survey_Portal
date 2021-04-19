@@ -28,36 +28,36 @@ public class ParticipantController
 	ParticipantServiceImpl participantserviceimpl;
 	
 	@GetMapping("/count")
-	private ResponseEntity<Long> countRecords(){
+	public ResponseEntity<Long> countRecords(){
 		return new ResponseEntity<>(participantserviceimpl.getRecordsCount(),HttpStatus.ACCEPTED);
 	}
 		
 	@GetMapping("/allparticipant")
-	private List<Participant> getParticipant(){
+	public List<Participant> getParticipant(){
 		return participantserviceimpl.getAllParticipant();
 	}
 	
 	@GetMapping("/{participantId}")
-	private Participant getParticipantbyid(@PathVariable("participantId") Long participantId) throws NumberFormatException, ParticipantNotFoundException{
+	public Participant getParticipantbyid(@PathVariable("participantId") Long participantId) throws NumberFormatException, ParticipantNotFoundException{
 		return participantserviceimpl.findParticipantById(participantId);
 	}
 	
 	@PostMapping("/register/{userName}/{password}")
-	private ResponseEntity<String> registerParticipant(@PathVariable("userName") String userName, @PathVariable("password") String password) throws InvalidParticipantException{
+	public ResponseEntity<String> registerParticipant(@PathVariable("userName") String userName, @PathVariable("password") String password) throws InvalidParticipantException{
 		return new ResponseEntity<>(participantserviceimpl.register(userName, password),HttpStatus.ACCEPTED);
 	}
 	@PutMapping("/update/{id}/{firstName}/{lastName}/{userName}")
-	private ResponseEntity <String> updateParticipant(@PathVariable("id") Long id, @PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName, @PathVariable("userName") String userName) throws InvalidParticipantException, ParticipantNotFoundException{
+	public ResponseEntity <String> updateParticipant(@PathVariable("id") Long id, @PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName, @PathVariable("userName") String userName) throws InvalidParticipantException, ParticipantNotFoundException{
 		return new ResponseEntity<>(participantserviceimpl.update(id,firstName, lastName, userName),HttpStatus.OK);
 	}
 	
 	@PostMapping("/add/{firstName}/{lastName}/{userName}")
-	private ResponseEntity <String> addParticipant(@PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName, @PathVariable("userName") String userName) throws InvalidParticipantException, ParticipantNotFoundException{
+	public ResponseEntity <String> addParticipant(@PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName, @PathVariable("userName") String userName) throws InvalidParticipantException, ParticipantNotFoundException{
 		return new ResponseEntity<>(participantserviceimpl.add(firstName, lastName, userName),HttpStatus.OK);
 	}
 	
 	@DeleteMapping("/delete/{participantId}")
-	 private ResponseEntity<String> deleteParticipant(@PathVariable Long participantId) throws NumberFormatException, InvalidParticipantException
+	public ResponseEntity<String> deleteParticipant(@PathVariable Long participantId) throws NumberFormatException, InvalidParticipantException
 	{
 		return new ResponseEntity<>( participantserviceimpl.delete(participantId),HttpStatus.OK);
 	}

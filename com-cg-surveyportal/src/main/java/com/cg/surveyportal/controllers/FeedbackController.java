@@ -23,31 +23,25 @@ public class FeedbackController {
 	@Autowired
 	IFeedbackService feedbackService; 
 	
-//	@GetMapping("/populate")
-//	private void populate() throws ParticipantNotFoundException, SurveyNotFoundException
-//	{
-//		feedbackService.populateFeedback();
-//	}
-	
 	@GetMapping("/all")
-	private List<Feedback> getAll()
+	public List<Feedback> getAll()
 	{
 		return feedbackService.getAll();
 	}
 	
 	@GetMapping("/findById/{id}")
-	private Feedback getfindById(@PathVariable("id") long id) throws FeedbackNotFoundException
+	public Feedback getfindById(@PathVariable("id") long id) throws FeedbackNotFoundException
 	{
 		return feedbackService.getById(id);
 	}
 	@DeleteMapping("/removeById/{removeId}")
-	private Feedback removeById(@PathVariable("removeId") long removeId)
+	public Feedback removeById(@PathVariable("removeId") long removeId)
 	{
 		return feedbackService.removeById(removeId);
 	}
 	
 	@PostMapping("/addFeedback/{participantId}/{surveyId}/{questionId}/{option}")
-	private void addFeedbackText(@PathVariable("participantId") long participantId, @PathVariable("surveyId") long surveyId, @PathVariable("questionId") long questionId, @PathVariable("option") String option) throws ParticipantNotFoundException, SurveyNotFoundException
+	public void addFeedbackText(@PathVariable("participantId") long participantId, @PathVariable("surveyId") long surveyId, @PathVariable("questionId") long questionId, @PathVariable("option") String option) throws ParticipantNotFoundException, SurveyNotFoundException
 	{
 		feedbackService.addFeedback( participantId, surveyId, questionId, option);
 	}

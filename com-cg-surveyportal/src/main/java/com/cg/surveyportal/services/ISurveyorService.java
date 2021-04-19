@@ -7,7 +7,6 @@ import com.cg.surveyportal.exceptions.InvalidSurveyorException;
 import com.cg.surveyportal.exceptions.SurveyorNotFoundException;
 
 public interface ISurveyorService {
-	public void populateSurveyor();
 	public Surveyor getById(Long surveyorId) throws SurveyorNotFoundException;
 	public List<Surveyor> getAllSurveyors();
 	public Surveyor getByUsername(String username) throws InvalidSurveyorException;

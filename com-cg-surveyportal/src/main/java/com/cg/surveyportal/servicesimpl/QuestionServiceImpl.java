@@ -40,32 +40,6 @@ public class QuestionServiceImpl implements IQuestionService {
 		return (List<Question>) questionRepository.findAll();
 	}
 	@Override
-	public void populate() throws SurveyNotFoundException {
-		Question question = new Question();
-    	question.setQuestionText("How would you rate your experience with our product?");
-		this.setOptionDefault(question);
-		question.setSurvey(surveyService.getSurveyById(15));
-		questionRepository.save(question);
-		//******************************************//
-		question = new Question();
-    	question.setQuestionText("How would you rate your experience you have with this organization?");
-		this.setOptionDefault(question);
-		question.setSurvey(surveyService.getSurveyById(16));
-		questionRepository.save(question);
-		//******************************************//
-		question = new Question();
-    	question.setQuestionText("Do you like our show? Share your experience with us.");
-		this.setOptionDefault(question);
-		question.setSurvey(surveyService.getSurveyById(17));
-		questionRepository.save(question);
-		//******************************************//
-		question = new Question();
-    	question.setQuestionText("How would you rate your experience of your lasr trip?");
-		this.setOptionDefault(question);
-		question.setSurvey(surveyService.getSurveyById(18));
-		questionRepository.save(question);
-	}
-	@Override
 	public void setOptionDefault(Question question) {
 		question.setOption1("Very satisfied");
 		question.setOption2("Satisfied");

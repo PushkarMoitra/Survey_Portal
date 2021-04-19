@@ -12,7 +12,6 @@ public interface IQuestionService {
     public List<Question> getQuestionDetails();
     public Question removeById(Long questionId);
     public Question updateQuestion(long questionId,String questionText);
-	public void populate() throws SurveyNotFoundException;
 	public Question addQuestion(String questionText, Long surveyId) throws SurveyNotFoundException;
 	public void setOptionDefault(Question question);
 }

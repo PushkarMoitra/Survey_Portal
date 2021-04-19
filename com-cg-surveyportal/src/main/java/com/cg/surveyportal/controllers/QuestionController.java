@@ -23,34 +23,29 @@ public class QuestionController {
 
 	@Autowired
 	IQuestionService questionService;
-//	
-//	@GetMapping("/populate")
-//	private void populate()
-//	{
-//		questionService.populate();
-//	}
+
 	@GetMapping("/all")
-	private List<Question> getQuestionDetails(){
+	public List<Question> getQuestionDetails(){
 		return questionService.getQuestionDetails();
 	}
 	
 	@GetMapping("/findById/{id}")
-	private Question getfindById(@PathVariable("id") long id) throws QuestionNotFoundException{
+	public Question getfindById(@PathVariable("id") long id) throws QuestionNotFoundException{
 		return questionService.getById(id);
 	}
 	
 	@PutMapping("/update/{id}/{updatetext}")
-	private Question updateQuestion(@PathVariable("id") long id, @PathVariable("updatetext") String updatetext) throws InvalidQuestionTextException, SurveyNotFoundException, InvalidSurveyException{
+	public Question updateQuestion(@PathVariable("id") long id, @PathVariable("updatetext") String updatetext) throws InvalidQuestionTextException, SurveyNotFoundException, InvalidSurveyException{
 		return questionService.updateQuestion(id, updatetext);
 	}
 	
 	@DeleteMapping("/remove/{removeId}")
-	private Question removeById(@PathVariable("removeId") long removeId){
+	public Question removeById(@PathVariable("removeId") long removeId){
 		return questionService.removeById(removeId);
 	}
 	
 	@PostMapping("/add/{questionText}/{surveyId}")
-	private void addQuestion(@PathVariable("questionText") String questionText, @PathVariable("surveyId") long surveyId) throws SurveyNotFoundException{
+	public void addQuestion(@PathVariable("questionText") String questionText, @PathVariable("surveyId") long surveyId) throws SurveyNotFoundException{
 		questionService.addQuestion(questionText, surveyId);
 	}
 }

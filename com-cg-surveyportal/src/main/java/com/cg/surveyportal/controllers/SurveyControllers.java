@@ -24,20 +24,15 @@ public class SurveyControllers {
 	@Autowired
 	private ISurveyService surveyService;
 	
-//	@GetMapping("/populate")
-//	private void populateSurvey() throws TopicNotFoundException {
-//		surveyService.populateSurvey();
-//	}
-	
 	//creating a get mapping that retrieves the details of all Surveys
 	@GetMapping("/allsurveys")
-	private List<Survey> getAllSurveys() {
+	public List<Survey> getAllSurveys() {
 		return surveyService.getAllSurveys();
 	}
 	
 	//creating a get mapping that shows the Survey details by surveyId
 	@GetMapping("/getbyid/{surveyId}")
-    private Survey getSurveyById(@PathVariable("surveyId") Long surveyId) throws SurveyNotFoundException
+	public Survey getSurveyById(@PathVariable("surveyId") Long surveyId) throws SurveyNotFoundException
 	{
 			return surveyService.getSurveyById(surveyId);
 	}
@@ -48,28 +43,28 @@ public class SurveyControllers {
 //	{
 //		surveyService.deleteAllsurveys();
 //	}
-	
+
 	//creating a delete mapping that deletes a specified Survey
 	@DeleteMapping("/remove/{id}")
-	private void removeSurveyById(@PathVariable("id") long id) throws SurveyNotFoundException {
+	public void removeSurveyById(@PathVariable("id") long id) throws SurveyNotFoundException {
 		surveyService.removeSurveyById(id);
 	}
 	
 	//Deactivating a survey
 	@PutMapping("/close/{surveyId}")
-	private void closeSurvey(@PathVariable("surveyId") Long surveyId) throws SurveyNotFoundException {
+	public void closeSurvey(@PathVariable("surveyId") Long surveyId) throws SurveyNotFoundException {
 		surveyService.closeSurvey(surveyId);
 	}
 
 	//creating put mapping that updates the Survey details
 	@PutMapping("/update/{surveyId}/{description}")
-	private Survey updateSurveyDescription(@PathVariable("surveyId") Long surveyId,@PathVariable("description") String description) throws SurveyNotFoundException {
+	public Survey updateSurveyDescription(@PathVariable("surveyId") Long surveyId,@PathVariable("description") String description) throws SurveyNotFoundException {
 		return surveyService.updateSurveyDescription(surveyId,description);
 	}
 	
 	//creating post mapping that post the Survey detail in the database
 	@PostMapping("/add")
-	private Survey add(@RequestBody Survey survey) throws InvalidSurveyException {
+	public Survey add(@RequestBody Survey survey) throws InvalidSurveyException {
 		surveyService.add(survey);
 		return survey;
 	}
