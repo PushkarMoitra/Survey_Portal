@@ -89,8 +89,4 @@ public class Participant {
 		return "Participant [id=" + id + ", username=" + username + ", firstName=" + firstName + ", lastName="
 				+ lastName + "]";
 	}
-
-	
-	
-	
 }

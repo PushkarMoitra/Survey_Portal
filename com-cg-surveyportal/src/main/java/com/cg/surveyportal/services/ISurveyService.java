@@ -7,8 +7,6 @@ import com.cg.surveyportal.exceptions.InvalidSurveyException;
 import com.cg.surveyportal.exceptions.SurveyNotFoundException;
 
 public interface ISurveyService {
-
-
 	public List<Survey> getAllSurveys();
 	public Survey updateSurveyDescription(Long surveyId, String description) throws SurveyNotFoundException;
 	public Survey getSurveyById(long id) throws SurveyNotFoundException;

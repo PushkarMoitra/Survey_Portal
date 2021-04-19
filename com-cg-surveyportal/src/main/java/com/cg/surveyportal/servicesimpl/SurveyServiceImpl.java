@@ -10,18 +10,12 @@ import com.cg.surveyportal.exceptions.InvalidSurveyException;
 import com.cg.surveyportal.exceptions.SurveyNotFoundException;
 import com.cg.surveyportal.repositories.ISurveyRepository;
 import com.cg.surveyportal.services.ISurveyService;
-import com.cg.surveyportal.services.ISurveyorService;
-import com.cg.surveyportal.services.ITopicService;
 
 @Service
 public class SurveyServiceImpl implements ISurveyService {
 	
 	@Autowired
 	ISurveyRepository surveyRepository;
-	@Autowired
-	ITopicService topicService; 
-	@Autowired
-	ISurveyorService surveyorService; 
 	
 	//getting all Survey record by using the method findaAll() of JpaRepository
 	@Override

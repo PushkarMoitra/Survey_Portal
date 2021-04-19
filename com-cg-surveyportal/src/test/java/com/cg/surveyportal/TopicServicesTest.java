@@ -26,8 +26,6 @@ import com.cg.surveyportal.exceptions.TopicNotFoundException;
 import com.cg.surveyportal.repositories.ITopicRepository;
 import com.cg.surveyportal.services.ITopicService;
 
-
-
 @SpringBootTest
 public class TopicServicesTest {
 
@@ -47,7 +45,6 @@ public class TopicServicesTest {
 		topic.setName("Lifestyle");
 		topic.setDescription("Surveys on daily life of us.");
 	}
-	
 	@Test
 	@DisplayName("Positive testcase for get topics detail by using ID")
 	public void testGetTopicsDetail() throws TopicNotFoundException{

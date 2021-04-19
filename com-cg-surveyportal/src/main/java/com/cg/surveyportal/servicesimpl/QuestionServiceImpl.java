@@ -56,6 +56,4 @@ public class QuestionServiceImpl implements IQuestionService {
 		questionRepository.save(newQuestion);
 		return newQuestion;
 	}
-
-
 }
