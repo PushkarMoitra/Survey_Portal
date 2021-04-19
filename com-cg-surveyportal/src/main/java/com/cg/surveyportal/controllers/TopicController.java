@@ -40,7 +40,6 @@ public class TopicController {
 	{
 		return new ResponseEntity<List<Topic>>(topicService.getAllTopic(), HttpStatus.OK);
 	}
-
 	/**
 	 * Show a topics with a particular ID.
 	 * 
@@ -53,7 +52,6 @@ public class TopicController {
 	{
 		return new ResponseEntity<Topic>(topicService.getTopicDetails(id), HttpStatus.FOUND);
 	}
-	
 	/**
 	 * Show all the topics with a particular name.
 	 * 
@@ -68,7 +66,6 @@ public class TopicController {
 		//return topicService.getTopicsDetails(name);
 		return new ResponseEntity<List<Topic>>(topicService.getTopicsDetails(name), HttpStatus.FOUND);
 	}
-	
 	/**
 	 * Show the number of topic present.
 	 * 
@@ -79,7 +76,6 @@ public class TopicController {
 	{
 		return new ResponseEntity<Long>(topicService.getTopicCount(), HttpStatus.OK);
 	}
-	
 	/**
 	 * Show the number of surveys done on a particular topic.
 	 * 
@@ -93,7 +89,6 @@ public class TopicController {
 	{
 		return new ResponseEntity<Long>(topicService.getSurveyCountOnTopic(name), HttpStatus.OK);
 	}
-	
 	/**
 	 * Show all topic with no surveys done on them.
 	 * 
@@ -104,7 +99,6 @@ public class TopicController {
 	{
 		return new ResponseEntity<List<Topic>>(topicService.getTopicsWithNoSurveys(), HttpStatus.FOUND);
 	}
-
 	/**
 	 * Create a new topic. 
 	 * 
@@ -122,7 +116,6 @@ public class TopicController {
 	{
 		return new ResponseEntity<Topic>(topicService.addTopic(name, description, surveyorUsername), HttpStatus.CREATED);
 	}
-	
 	/**
 	 *Update the name of the topic.
      * 
@@ -137,7 +130,6 @@ public class TopicController {
 	{
 		return new ResponseEntity<Topic>(topicService.updateTopicName(id, name), HttpStatus.OK);
 	}
-	
 	/**
      * Update the description of the topic.
      * 
@@ -151,7 +143,6 @@ public class TopicController {
 	{
 		return new ResponseEntity<Topic>(topicService.updateTopicDescription(id, description), HttpStatus.OK);
 	}
-	
 	/**
 	 * Change the surveyor of a topic.
 	 * 
@@ -166,7 +157,6 @@ public class TopicController {
 	{
 		return new ResponseEntity<Topic>(topicService.changeSurveyor(id, surveyorid), HttpStatus.OK);
 	}
-	
 	/**
      * Remove a particular topic based on ID.
      * 

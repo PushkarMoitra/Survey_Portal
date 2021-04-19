@@ -27,7 +27,7 @@ public class Topic {
     @OneToMany(fetch = FetchType.EAGER, mappedBy="topic")
     @JsonManagedReference("topic_surveys")
     private List<Survey> surveys;
-	@OneToOne(fetch = FetchType.EAGER, optional = true)
+	@OneToOne(fetch = FetchType.EAGER)
 	@JsonManagedReference("topic_surveyor")
 	private Surveyor surveyor;
 	
