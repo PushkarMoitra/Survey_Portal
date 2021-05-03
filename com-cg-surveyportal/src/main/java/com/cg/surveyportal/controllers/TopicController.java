@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,6 +24,7 @@ import com.cg.surveyportal.services.ITopicService;
 /**
  *It is the controller class for topic which contains all the end points
  */
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/topic")
 public class TopicController {
@@ -47,10 +49,11 @@ public class TopicController {
 	 * @return the topic details of a topic by ID with a FOUND http status.
 	 * @throws TopicNotFoundException : If the topic is not found.
 	 */
+	@CrossOrigin
 	@GetMapping("/topicbyid/{id}")
 	public ResponseEntity<Topic> getTopicDetails(@PathVariable("id") long id) throws TopicNotFoundException
 	{
-		return new ResponseEntity<Topic>(topicService.getTopicDetails(id), HttpStatus.FOUND);
+		return new ResponseEntity<Topic>(topicService.getTopicDetails(id), HttpStatus.OK);
 	}
 	/**
 	 * Show all the topics with a particular name.

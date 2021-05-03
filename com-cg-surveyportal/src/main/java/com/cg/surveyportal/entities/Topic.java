@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 /*
  * This will create a table in the database in below mentioned format.
@@ -26,6 +28,7 @@ public class Topic {
     private String description;
     @OneToMany(fetch = FetchType.EAGER, mappedBy="topic")
     @JsonManagedReference("topic_surveys")
+    //@JsonIgnore
     private List<Survey> surveys;
 	@OneToOne(fetch = FetchType.EAGER)
 	@JsonManagedReference("topic_surveyor")
